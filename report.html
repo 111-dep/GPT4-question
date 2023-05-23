@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="files/css/base.css">
+    <link rel="stylesheet" type="text/css" href="files/css/htmlbase.css">
+    <link rel="stylesheet" type="text/css" href="files/css/combase.css">
+    <link rel="stylesheet" type="text/css" href="files/css/pro.css">
+    <link rel="stylesheet" type="text/css" href="files/css/prettify.css">
+    <link type="text/css" rel="stylesheet" href="files/css/jquery.tocify.css"/>
+    <link rel="stylesheet" type="text/css" href="files/css/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="files/css/jquery-ui.css"/>
+    <title>分析报告</title>
+    <script type="text/javascript" src="files/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="files/js/jquery-ui-1.9.1.custom.min.js"></script>
+    <script type="text/javascript" src="files/js/jquery.tocify.min.js"></script>
+    <script type="text/javascript" src="files/js/jquery.countup.min.js"></script>
+    <script type="text/javascript" src="files/js/headFoot.js"></script>
+    <script type="text/javascript" src="files/js/scale.js"></script>
+    <script type="text/javascript" src="files/js/prettify.js"></script>
+    <script type="text/javascript" src="files/js/datatables.min.js"></script>
+
+</head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<style>
+    #head_logo {
+        width: 30%;
+        min-width: 100px
+    }
+
+    #head_info {
+        width: 70%;
+        min-width: 500px
+    }
+
+    .cover-detail {
+        min-width: 500px
+    }
+
+    .header:before {
+        content: none;
+    }
+
+    p {
+        margin: 3px;
+        text-indent: 2em;
+    }
+
+    code {
+        white-space: pre-wrap;
+    }
+
+    table {
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        /*-webkit-box-shadow: 0 1px 1px #ccc;
+        -moz-box-shadow: 0 1px 1px #ccc;
+        box-shadow: 0 1px 1px #ccc;   */
+    }
+
+    table tr:hover {
+        background: #fbf8e9;
+        -o-transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+    }
+
+    table td, .table th {
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        height: 10px;
+    }
+
+    .center {
+        width: auto;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tocify-item.active, .tocify-item.active:hover, .tocify-item.active:focus {
+        background: lightgreen;
+    }
+
+</style>
+<div>
+    <!-- pc-header -->
+    <header class="heade-nav">
+        <div class="head-tops clearfix">
+            <div class="topNav-right fr">
+                <ul class="topnav-ul1 fl" style="display: inline">
+                    <li>
+                        <a class="loginA-s" href=" /index/user/login.html"
+                           target="_blank">登录</a>
+                    </li>
+                    <li><a class="shopA-s" href="http://www.taogene.com" target="_blank">商城</a></li>
+                    <li><a href=" /index/about/about.html" target="_blank">关于 </a></li>
+                    <li><a href=" " target="_blank"><img src="files/background/search-bai.svg"
+                                                         width="23"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="head-bots clearfix">
+            <div class="fl">
+                <ul class="headNav-ul2 clearfix">
+                    <li>
+                        <a style="color:#000;"> </a>
+
+                    </li>
+
+
+                    <li>
+                        <a>单细胞转录组常规分析报告</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="headNav-logo fr">
+
+                    <span><a href=" " target="_blank"><img
+                            src="files/background/logo.png"></a></span>
+
+            </div>
+
+        </div>
+
+        <div class="hsbg"></div>
+
+    </header>
+
+    <div class="mhead mheadon">
+        <div class="mtoplauge"><i></i><span>Global</span></div>
+        <div class="mheadnav">
+            <div class="mheadnavm">
+
+                <div class="fr"><a href=" /" target="_blank">
+                    <img src="files/background/search-bai.svg" width="26"/></a>
+                </div>
+                <a href=" " class="mlogo fl">
+                    <img class="logo1" src="files/background/logo-fan.png">
+                    <img class="logo2" src="files/background/logo-fan.png">
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 报告内容和目录 -->
+    <div class="proha proha1200 w1200 clearfix">
+        <!-- 右边栏目录-->
+        <div class="prohar needzk fr" id="tocify-group">
+            <div class="prohara">
+                <ul>
+                    <li>
+                        <h5 class="proharah5 proharah5on"><span>目录</span></h5>
+                        <dl class="phrasub1 display-menu" style="overflow: hidden; ">
+
+                            <div id="TOC" class="tocify">
+                            </div>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <!-- 联系方式 -->
+            <div class="proharb proharb-static" style="opacity: 1;padding:0;">
+                <p class="proharbp1" style="padding-bottom: 0;text-indent: 0em">获取支持</p>
+                <div class="xldda" style="display: block;background:none;">
+                    <p style="text-indent: 0em"><span class="ctel">400-621-0302</span></p>
+                    <p style="text-indent: 0em"><span class="cmail">service@genechem.com.cn</span></p>
+                    <p style="text-indent: 0em"><span
+                            onclick="window.open('https://im.7x24cc.com/phone_webChat.html?' +
+                             'accountId=N000000017411&amp;chatId=781fc95d-30dc-4aa2-aaa6-6a6a05ca2258')"
+                            class="online">在线客服</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- 左侧报告内容 -->
+        <div class="prohal fl">
+            <div class="prohalp1">
+                <div id="head_logo" class="fl cover-block" style="padding-top: 60px;padding-left: 20px;">
+                    <div class="cover-title"></div>
+                    <div class="cover-title">分析报告</div>
+                </div>
+                <div id="head_info" class="fr cover-block" style="padding-top: 50px;padding-left: 20px;">
+                    <div class="cover-detail">合同编号：</div>
+                    <div class="cover-detail">客户姓名：</div>
+                    <div class="cover-detail">客户单位：人肺脏组织</div>
+                    <div class="cover-detail">报告时间：2023/5/17</div>
+                </div>
+
+            </div>
+            <div class="prohalp2">
+
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h1 class="heading2" id="l1l2">1 分析流程</h1>
+                <p><span style="text-align: center;display:block;">生信分析流程图</span></p>
+                <p><img alt="worflow" src="src/img/workflow.svg"/></p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h1 class="heading2" id="l1l2">2 样本信息</h1>
+                <table style="border-collapse: collapse; width: auto; margin-left: auto; margin-right: auto;">
+                    <thead>
+                    <tr>
+                        <td style="border: 1px solid black; text-align: center;">样本编号</td>
+                        <td style="border: 1px solid black; text-align: center;">1</td>
+                        <td style="border: 1px solid black; text-align: center;">2</td>
+                        <td style="border: 1px solid black; text-align: center;">3</td>
+                        <td style="border: 1px solid black; text-align: center;">4</td>
+                        <td style="border: 1px solid black; text-align: center;">5</td>
+                        <td style="border: 1px solid black; text-align: center;">6</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; text-align: center;">实验物种</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                        <td style="border: 1px solid black; text-align: center;">人</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; text-align: center;">样本组别</td>
+                        <td style="border: 1px solid black; text-align: center;">对照组</td>
+                        <td style="border: 1px solid black; text-align: center;">对照组</td>
+                        <td style="border: 1px solid black; text-align: center;">实验组</td>
+                        <td style="border: 1px solid black; text-align: center;">实验组</td>
+                        <td style="border: 1px solid black; text-align: center;">实验组</td>
+                        <td style="border: 1px solid black; text-align: center;">实验组</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; text-align: center;">样本类型</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                        <td style="border: 1px solid black; text-align: center;">肺癌组织</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <h1 class="heading2" id="l1l2">3 质量控制</h1>
+                <p>
+                    单细胞实验中，我们期望每一个微液滴（droplet）或微孔分离得到单一的活细胞。然而，由于技术条件的限制，会导致一些异常情形。例如，一个微液滴同时捕获到两个或多个细胞，即双细胞液滴（doublet）或多细胞液滴（multiplet）；捕获到死细胞；以及未捕获到任何细胞，即空液滴（empty
+                    droplet）等。 因此，在数据分析之前，我们需要对单细胞转录组数据进行质量控制（QC），只保留对应单一活细胞的barcode数据<sup
+                        title="Luecken M D, Theis F J. Current best practices in single‐cell RNA‐seq analysis: a tutorial[J]. Molecular systems biology, 2019, 15(6): e8746.">[<a
+                        href="#PMID_31217225" style="color: #000; text-decoration: none;">1</a>]</sup>。常用的三个QC指标及本研究设置的过滤阈值如QC指标阈值表所示。mRNA分子数和基因数过低，被认为是空液滴，过高被认为是双细胞液滴或多细胞液滴，而线粒体基因计数占比过高则被认为是死细胞。
+                </p>
+                <!--
+<p>&nbsp;</p>
+<p><span style="font-size:10px"><em>• Number of Genes: 单个细胞检测到的基因数</em></span></p>
+<p><span style="font-size:10px"><em>• Total Counts: 单个细胞中全部的mRNA分子数，即UMI计数，简称计数</em></span></p>
+<p><span style="font-size:10px"><em>• Percentage of Mitochondrial Counts: 单个细胞中的来自线粒体 UMI 计数的占比</em></span>  </p>
+<p>&nbsp;</p>
+-->
+
+                <!--<details>
+<summary>什么是微液滴（droplet）？</summary>
+<pre><code>
+微液滴是分离单个细胞的“容器”。根据实验方案的不同，单细胞分离的方法也不同。基于液滴的方法（droplet-based）将每个细胞捕捉到微流控液滴中，如10x Genomics Chromium平台；而基于平板的技术（plate-based）则是将细胞分离到平板上的微孔中，如BD Rhapsody平台。我们在这里将微液滴和微孔统称为微液滴。
+<br /></code></pre>
+</details>
+
+<details>
+<summary>什么是条形码（barcode）？</summary>
+<pre><code>
+条形码是微液滴特异性的短核苷酸标签，用于区分来源于不同细胞的mRNA序列。在文库构建的过程中，细胞内的mRNA被捕获，反向转录成cDNA分子并被扩增。同一次的文库构建中，每个微液滴具有唯一的条形码，因此该液滴中的所有mRNA（来源于单个细胞）都会被标记上这个微液滴特异性的条形码。也就是说，来源于同一个细胞的mRNA具有相同的条形码。
+<br /></code></pre>
+</details>
+
+<details>
+<summary>什么是UMI？</summary>
+<pre><code>
+UMI全称独特分子标识（unique molecular identifiers）。细胞的cDNA在测序前会通过PCR将其扩增，以增加被检测的概率。UMI使我们能够区分同一mRNA分子的扩增拷贝，也称为技术人造物（techical artifact）或技术重复（technical duplicate），和来自同一基因转录的不同mRNA分子的读数。多个技术重复会被认为来源于同一个mRNA分子，只被计数一次。
+<br /></code></pre>
+</details>
+
+<p>mRNA分子数和基因数过低，被认为是空液滴，过高被认为是双细胞液滴或多细胞液滴，而线粒体基因计数占比过高则被认为是死细胞。
+综合考虑以上因素，本研究设置的过滤阈值如下表所示：</p>-->
+
+                </details>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">QC指标阈值表</span></p>
+                <p>
+                <center>
+                    <table style="border-collapse: collapse; width: 60%; border: 1px solid black;">
+                        <thead>
+                        <tr>
+                            <td style="text-align:center; border: 1px solid black;">QC指标</td>
+                            <td style="text-align:center; border: 1px solid black;">最大值</td>
+                            <td style="text-align:center; border: 1px solid black;">最小值</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td align="center" style="border: 1px solid black;">Number of Genes</td>
+                            <td align="center" style="border: 1px solid black;">8000</td>
+                            <td align="center" style="border: 1px solid black;">0</td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="border: 1px solid black;">Total Counts</td>
+                            <td align="center" style="border: 1px solid black;"> 100000</td>
+                            <td align="center" style="border: 1px solid black;">0</td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="border: 1px solid black;">Percentage of Mitochondrial Counts</td>
+                            <td align="center" style="border: 1px solid black;"> 20</td>
+                            <td align="center" style="border: 1px solid black;">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </center>
+                </p>
+                <p></table></center></p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em
+                        style="font-style: italic;">Number of Genes: 单个细胞中基因数</em></span></p>
+                <p><span style="font-size:10px"><em style="font-style: italic;">Total Counts: 单个细胞中全部 UMI 数</em></span>
+                </p>
+                <p><span style="font-size:10px"><em style="font-style: italic;">Percentage of Mitochondrial Counts: 单个细胞中的来自线粒体 UMI 计数的占比</em></span>
+                </p>
+
+                <p>&nbsp;</p>
+                <p>使用小提琴图展示和检查 QC 指标(<a href="data/01.QC/figures/qc_metrics.violin.html">view</a>),结果展示如下：
+                </p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">QC指标小提琴图</span></p>
+                <p><select id="html_qc_metrics_violin_content" style="height: 60px;">
+                    <option value="qc_metrics_violin">qc_metrics.violin</option>
+                    <option value="sample_name_qc_metrics_violin">sample_name.qc_metrics.violin</option>
+                </select>
+                <div id="html_qc_metrics_violin_d_content">
+                    <div id="html_qc_metrics_violin__qc_metrics_violin_p_content">
+                        <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:1200px;height:900px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="01.QC/figures/qc_metrics.violin.html"></embed>
+                        </div>
+                    </div>
+                    <div id="html_qc_metrics_violin__sample_name_qc_metrics_violin_p_content" style="display:none">
+                        <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:1200px;height:900px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="01.QC/figures/sample_name.qc_metrics.violin.html"></embed>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#html_qc_metrics_violin_content").change(function () {
+                            var v = $(this).val();
+                            $("#html_qc_metrics_violin_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#html_qc_metrics_violin_d_content table").each(function (idx, e) {
+                                e.style.width = null
+                            });
+                            $("#html_qc_metrics_violin__" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+
+                </script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em
+                        style="font-style: italic;">Number of Genes: 单个细胞中基因数</em></span></p>
+                <p><span style="font-size:10px"><em style="font-style: italic;">Total Counts: 单个细胞中全部 UMI 数</em></span>
+                </p>
+                <p><span style="font-size:10px"><em style="font-style: italic;">Percentage of Mitochondrial Counts: 单个细胞中的来自线粒体 UMI 计数的占比</em></span>
+                </p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h1 class="heading2" id="l1l2">4. 单细胞分群及可视化</h1>
+                <h2 class="heading2" id="l1l2">4.1 细胞分群</h2>
+                <p>为获得高质量的单细胞数据，尽可能地凸显数据中有用的“信号”，并去除可能造成干扰的“噪音”，需进行数据的预处理。数据预处理包含：数据归一化（normalization）<sup
+                        title="Zhu S, Ding S, Wang P, et al. Nlrp9b inflammasome restricts rotavirus infection in intestinal epithelial cells[J]. Nature, 2017, 546(7660): 667-670.">[<a
+                        href="#PMID_27122128" style="color: #000; text-decoration: none;">2</a>]</sup>,<sup
+                        title="Vallejos C A, Risso D, Scialdone A, et al. Normalizing single-cell RNA sequencing data: challenges and opportunities[J]. Nature methods, 2017, 14(6): 565-571.">[<a
+                        href="#PMID_28504683" style="color: #000; text-decoration: none;">3</a>]</sup>，识别高可变基因（highly
+                    variable gene,
+                    HVG）<sup
+                            title="Klein A M, Mazutis L, Akartuna I, et al. Droplet barcoding for single-cell transcriptomics applied to embryonic stem cells[J]. Cell, 2015, 161(5): 1187-1201.">[<a
+                            href="#PMID_26000487" style="color: #000; text-decoration: none;">6</a>]</sup>，消除（regress
+                    out）不需要的协变量，数据缩放（scaling）<sup
+                            title="Brennecke P, Anders S, Kim J K, et al. Accounting for technical noise in single-cell RNA-seq experiments[J]. Nature methods, 2013, 10(11): 1093-1095.">[<a
+                            href="#PMID_24056876" style="color: #000; text-decoration: none;">4</a>]</sup>，及降维<sup
+                            title="Heimberg G, Bhatnagar R, El-Samad H, et al. Low dimensionality in gene expression data enables the accurate extraction of transcriptional programs from shallow sequencing[J]. Cell systems, 2016, 2(4): 239-250.">[<a
+                            href="#PMID_27135536" style="color: #000; text-decoration: none;">7</a>]</sup>,<sup
+                            title="Pearson K. LIII. On lines and planes of closest fit to systems of points in space[J]. The London, Edinburgh, and Dublin philosophical magazine and journal of science, 1901, 2(11): 559-572.">[<a
+                            href="#PCA" style="color: #000; text-decoration: none;">8</a>]</sup>。如果数据存在明显的批次效应，还需对数据进行整合（integration），以去除批次效应<sup
+                            title="Korsunsky I, Millard N, Fan J, et al. Fast, sensitive and accurate integration of single-cell data with Harmony[J]. Nature methods, 2019, 16(12): 1289-1296.">[<a
+                            href="#PMID_31740819" style="color: #000; text-decoration: none;">5</a>]</sup>。</p>
+                <p>细胞分群是为了将表达模式相近的细胞归为一类，同时区分表达模式差别显著的细胞。通常采用基于图（graph）的聚类方法，常用的方法如
+                    leiden<sup
+                            title="Traag V A, Waltman L, Van Eck N J. From Louvain to Leiden: guaranteeing well-connected communities[J]. Scientific reports, 2019, 9(1): 1-12.">[<a
+                            href="#Leiden" style="color: #000; text-decoration: none;">11</a>]</sup> 和 louvain<sup
+                            title="Blondel V D, Guillaume J L, Lambiotte R, et al. Fast unfolding of communities in large networks[J]. Journal of statistical mechanics: theory and experiment, 2008, 2008(10): P10008.">[<a
+                            href="#Louvain" style="color: #000; text-decoration: none;">12</a>]</sup>，它为每一个细胞分配一个分类标签，称为细胞群标识符（cluster_id）。被标识为同一细胞群的细胞具有相近的表达模式，很可能属于同一细胞类型，或具有相近的生物学功能。
+                </p>
+                <p>本研究数据存在批次效应，用 <code>harmony</code> 去除批次效应进行后续分析,去除批次前(<a
+                        href="data/06.CompositionalAnalysis/figures/unbatched.sample_name.umap.png">view</a>)后(<a
+                        href="data/06.CompositionalAnalysis/figures/sample_name.umap.pdf">view</a>)样本分布结果如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">样本信息降维聚类图（去批次前）</span></p>
+                <p><img
+                        width="800px"
+                        height="600px"
+                        src="06.CompositionalAnalysis/figures/unbatched.sample_name.umap.png">
+                </img></p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em
+                        style="font-style: italic;">利用投影并基于样本进行着色，展示不同样本来源的细胞分布情况</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">样本信息降维聚类图（去批次后）</span></p>
+                <p><img
+                        width="800px"
+                        height="600px"
+                        src="06.CompositionalAnalysis/figures/sample_name.umap.png">
+                </img></p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em
+                        style="font-style: italic;">利用投影并基于样本进行着色，展示不同样本来源的细胞分布情况</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>细胞分群和细胞周期等信息(<a href="data/02.Clustering/tables/cell_info.csv">view</a>)展示如下：</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞分群信息表</span></p>
+                <p>
+                <div>
+                    <table class="display"
+                           style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                           id="table_cluster_info_1">
+                        <thead>
+                        <tr>
+                            <th>main_cluster_id</th>
+                            <th>n_cells</th>
+                            <th>avg_n_genes</th>
+                            <th>avg_counts</th>
+                            <th>avg_pct_mt</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </p></div>
+                <script>$(document).ready(function () {
+                    var datas = [["0", "2671", "1746.6593036315987", "4468.458", "2.7720497"], ["1", "2374", "4379.799073294019", "25411.242", "2.9599373"], ["2", "2290", "1024.3493449781658", "2461.8782", "3.132581"], ["3", "2201", "3932.7051340299863", "17007.828", "4.9512663"], ["4", "2182", "5006.16590284143", "21268.07", "4.3471355"], ["5", "1860", "5332.0274193548385", "22048.08", "6.1083865"], ["6", "1671", "4928.338120885697", "30645.037", "4.530827"], ["7", "1644", "1817.1964720194646", "4399.0537", "3.3361986"], ["8", "1053", "2808.4245014245016", "9497.511", "2.3756294"], ["9", "989", "1929.0424671385238", "4859.374", "2.6312726"], ["10", "977", "3591.5363357215965", "12595.307", "6.7493863"], ["11", "961", "934.1758584807492", "1948.0156", "3.042862"], ["12", "946", "3272.9016913319238", "14418.552", "2.5386407"], ["13", "847", "1065.70720188902", "1914.5135", "4.0756106"], ["14", "820", "2823.689024390244", "11617.0625", "2.7338636"], ["15", "736", "4143.482336956522", "15919.372", "4.6287384"], ["16", "718", "1777.7966573816157", "5180.809", "3.2926922"], ["17", "696", "2103.823275862069", "6348.997", "2.8455915"], ["18", "686", "1750.8483965014577", "4812.1616", "2.7296228"], ["19", "590", "3309.157627118644", "10404.747", "5.248623"], ["20", "573", "4608.026178010471", "18922.332", "8.786455"], ["21", "554", "4540.8465703971115", "24326.908", "2.89889"], ["22", "527", "1916.6793168880456", "4380.1084", "3.4602122"], ["23", "524", "701.4961832061068", "1520.2958", "1.905479"], ["24", "467", "2670.5888650963598", "8576.445", "2.6309698"], ["25", "270", "1625.351851851852", "4081.889", "3.5760188"], ["26", "257", "2048.1984435797667", "11295.7", "2.9635985"], ["27", "238", "3287.0798319327732", "14255.353", "2.310132"], ["28", "217", "3814.221198156682", "16269.512", "4.0121083"]];
+                    $('#table_cluster_info_1').DataTable({data: datas})
+                });</script>
+                <p>
+                <p><span style="font-size:10px"><em style="font-style: italic;">注：</em></span></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">cluster_id：细胞群标识符</span></em></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">n_cells：细胞数</span></em></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">avg_n_genes：平均表达的基因数</span></em>
+                </p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">avg_counts：平均表达量</span></em></p>
+                <p><em style="font-style: italic;"><span
+                        style="font-size:10px">avg_pct_mt：平均线粒体基因表达量占比</span></em></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">avg_s_score：平均 s_score</span></em></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">avg_g2m_score：平均 g2m_score</span></em>
+                </p>
+
+                <p>&nbsp;</p>
+                <p>为了直观地展示细胞间的相似程度（即距离），我们需要将高维空间数据“投影”在人眼可观察的2维或3维空间上，常用的方法有UMAP<sup
+                        title="McInnes L, Healy J, Melville J. Umap: Uniform manifold approximation and projection for dimension reduction[J]. arXiv preprint arXiv:1802.03426, 2018.">[<a
+                        href="#UMAP" style="color: #000; text-decoration: none;">10</a>]</sup>和tSNE<sup
+                        title="Van der Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of machine learning research, 2008, 9(11).">[<a
+                        href="#TSNE" style="color: #000; text-decoration: none;">9</a>]</sup>，它为每一个细胞计算一个2维或3维坐标位置，相对距离越近的细胞，具有相近的表达模式。
+                </p>
+
+
+                <details>
+                    <summary style="cursor: pointer;">单细胞数据为什么是高维空间的？</summary>
+                    <p>&nbsp;&nbsp;如果将单个细胞作为一个观察对象，那么基因表达就是我们需要考察的变量，在数据分析中称为特征（feature），特征的数目就是维度。单细胞RNA-seq通常能检测约2万个基因，显然地，单细胞数据是高维空间数据。即使采用PCA降维的方法对数据进行压缩，依然会保留30~50个PC，无法被人眼所观察。需要进一步使用UMAP或tSNE进行投影。</p>
+                </details>
+                <p>
+                    因此，通常细胞分群的结果和投影结果有对应关系，也就是说，被标识为同一细胞群的细胞，在坐标位置上也往往集中在一起。但单个细胞的绝对位置没有实际的生物学含义，相反，我们应该关注细胞群间的位置关系。连接在一起的细胞群，往往具有相同或相近的细胞类型，甚至暗示分化关系上连续的细胞状态。细胞分群和投影结果(<a
+                        href="data/02.Clustering/figures">view</a>)展示如下：
+                </p>
+
+
+                <!--                <p>&nbsp;</p>-->
+                <!--                <p><span style="text-align: center;display:block;">细胞分群降维聚类图</span></p>-->
+                <!--                <p><select id="cluster_id_umap_content"></p>-->
+                <!--                <option value="cluster_id_umap_3d">cluster_id.3D</option>-->
+                <!--                <option value="cluster_id_umap_2d">cluster_id.2D</option>-->
+                <!--                <p></select></p>-->
+                <!--                <div id="cluster_id_umap_d_content">-->
+                <!--                    <div id="cluster_id_umap_3d_p_content">-->
+                <!--                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">-->
+                <!--                            <embed scrolling="no"-->
+                <!--                                   style="border:none;width:1800px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"-->
+                <!--                                   src="02.Clustering/figures/main_cluster_id.umap.3d.html"></embed>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div id="cluster_id_umap_2d_p_content" style="display:none">-->
+                <!--                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">-->
+                <!--                            <embed scrolling="no"-->
+                <!--                                   style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"-->
+                <!--                                   src="02.Clustering/figures/main_cluster_id.umap.html"></embed>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                &lt;!&ndash;suppress LanguageDetectionInspection &ndash;&gt;-->
+                <!--                <script>-->
+                <!--                    $(function () {-->
+                <!--                        $("select#cluster_id_umap_content").change(function () {-->
+                <!--                            var v = $(this).val();-->
+                <!--                            $("#cluster_id_umap_d_content>div").each(function (idx, e) {-->
+                <!--                                e.style.display = "none"-->
+                <!--                            });-->
+                <!--                            $("#" + v + "_p_content").each(function (idx, e) {-->
+                <!--                                e.style.display = "inline"-->
+                <!--                            });-->
+                <!--                        });-->
+                <!--                    });-->
+                <!--                </script>-->
+                <!--                <p>&nbsp;</p>-->
+                <!--                <p><span style="text-align: center;display:block;">细胞分群降维聚类图</span></p>-->
+
+                <!--                <div id="cluster_id_umap_d_content">-->
+                <!--                    <div id="cluster_id_umap_3d_p_content" style="display:inline-block;">-->
+                <!--                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">-->
+                <!--                            <embed scrolling="no"-->
+                <!--                                style="border:none;width:1800px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"-->
+                <!--                                src="02.Clustering/figures/main_cluster_id.umap.3d.html"></embed>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div id="cluster_id_umap_2d_p_content" style="display:inline-block;">-->
+                <!--                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">-->
+                <!--                            <embed scrolling="no"-->
+                <!--                                style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"-->
+                <!--                                src="02.Clustering/figures/main_cluster_id.umap.html"></embed>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <p>&nbsp;</p>
+                <p style="text-align: center;">细胞分群降维聚类图</p>
+
+                <details>
+                    <summary>3D UMAP</summary>
+                    <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                        <embed scrolling="no"
+                               style="border:none;width:800px;height:800px;transform:scale(0.5);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                               src="02.Clustering/figures/main_cluster_id.umap.3d.html"></embed>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>2D UMAP</summary>
+                    <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                        <embed scrolling="no"
+                               style="border:none;width:800px;height:800px;transform:scale(0.5);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                               src="02.Clustering/figures/main_cluster_id.umap.html"></embed>
+                    </div>
+                </details>
+
+
+                <genechem-p>
+                    <genespan style="font-size:10px"><em>注：</em></genespan>
+                </genechem-p>
+                <p><span style="font-size:10px"><em>利用投影并基于细胞群着色，展示细胞分群信息。每一个点代表一个细胞，通过拖拽和缩放可以在不同角度和尺度观察细胞群。点击右侧图例可对特定细胞群进行显示/隐藏操作</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>相对距离越近的细胞群，通常相关性也越强。使用 Pearson<sup
+                        title="Benesty J, Chen J, Huang Y, et al. Pearson correlation coefficient[M]//Noise reduction in speech processing. Springer, Berlin, Heidelberg, 2009: 1-4.">[<a
+                        href="#Pearson" style="color: #000; text-decoration: none;">13</a>]</sup> 相关系数量化细胞群之间的相关性，并以热图(<a
+                        href="data/02.Clustering/figures/main_cluster_id.correlation.pdf">view</a>)展示如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞分群间相关性图</span></p>
+                <p><img
+                        width="800px"
+                        height="600px"
+                        src="02.Clustering/figures/main_cluster_id.correlation.png">
+                </img></p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>图片顶部和右侧的数字代表细胞群ID。左侧树状图表示依据细胞群相关性层次聚类的结果，处于相近分枝的细胞群相关性更强。热图中的色块代表不同细胞群的相关性，颜色越深，相关性越强</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>利用细胞的其他属性如基因表达量对投影结果着色，可查看对应属性的分布(<a
+                        href="data/02.Clustering/figures">view</a>)，结果展示如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞属性展示图</span></p>
+                <p><select id="umap_image_content"></p>
+                <option value="image_n_genes_umap">Number of Genes</option>
+                <option value="image_total_counts_umap">Total Counts</option>
+                <option value="image_pct_counts_mt_umap">Percent of MT Counts</option>
+                <option value="image_cell_cycle_umap">Cell Cycle</option>
+                <p></select></p>
+                <div id="umap_image_d_content">
+                    <div id="image_n_genes_umap_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="02.Clustering/figures/n_genes.umap.png">
+                        </img>
+                    </div>
+                    <div id="image_total_counts_umap_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="02.Clustering/figures/total_counts.umap.png">
+                        </img>
+                    </div>
+                    <div id="image_pct_counts_mt_umap_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="02.Clustering/figures/pct_counts_mt.umap.png">
+                        </img>
+                    </div>
+                    <div id="image_cell_cycle_umap_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="02.Clustering/figures/cell_cycle.umap.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#umap_image_content").change(function () {
+                            var v = $(this).val();
+                            $("#umap_image_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><em style="font-style: italic;"><span
+                        style="font-size:10px">图中每一个点代表一个细胞。并根据不同的展示方式进行着色。展示方式释义如下：</span></em>
+                </p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">Number of Genes：表达的基因数</span></em>
+                </p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">Total Counts：基因的总表达量</span></em>
+                </p>
+                <p><em style="font-style: italic;"><span
+                        style="font-size:10px">Percent of MT Counts：线粒体基因的表达量占比</span></em></p>
+                <p><em style="font-style: italic;"><span style="font-size:10px">Cell Cycle：细胞周期</span></em></p>
+
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h2 class="heading2" id="l1l2">1.4 细胞群标志基因发现</h2>
+                <p>将每个细胞群与其他所有细胞群的基因表达情况进行比较，筛选出在该细胞群中显著高表达的基因作为标志基因，常用的统计方法包括威尔克森秩和检验（Wilcoxon
+                    rank-sum test）和t测验等。该方法有助于识别细胞类型及探索未知的细胞群<sup
+                            title="Wagner A, Regev A, Yosef N. Revealing the vectors of cellular identity with single-cell genomics[J]. Nature biotechnology, 2016, 34(11): 1145-1160.">[<a
+                            href="#PMID_27824854" style="color: #000; text-decoration: none;">15</a>]</sup>。
+                    标志基因可以被分为两类，已被他人证明的用于注释细胞类型的典型标志基因和其他尚未被关注的基因。典型标志基因可在<strong>标志基因可视化</strong>部分用于注释细胞类型，尚未被关注的基因可能是具有生物学意义的，潜在的标志基因。
+                </p>
+                <p>细胞群标志基因的差异统计结果(<a href="data/03.MarkerGeneDiscovery/group_by_main_cluster_id/tables">view</a>)展示如下：
+                    &nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞群标志基因差异统计表</span></p>
+                <p>
+                <div>
+                    <table class="display"
+                           style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                           id="table_cluster_id_diffexpr_top10_1">
+                        <thead>
+                        <tr>
+                            <th>gene</th>
+                            <th>case</th>
+                            <th>ctrl</th>
+                            <th>avg_expr_case</th>
+                            <th>avg_expr_ctrl</th>
+                            <th>log_fc</th>
+                            <th>pct_cells_case</th>
+                            <th>pct_cells_ctrl</th>
+                            <th>pval</th>
+                            <th>adj_pval</th>
+                            <th>up_down</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </p></div>
+                <script>$(document).ready(function () {
+                    var datas = [["CAMK4", "0", "Rest", "1.87119259565682", "0.465202796268377", "2.02841451111817", "0.723", "0.104", "0", "0", "Up"], ["KLRB1", "0", "Rest", "1.93441715383115", "0.555227065887015", "1.98975070032022", "0.505", "0.074", "0", "0", "Up"], ["BCL11B", "0", "Rest", "1.94135130146918", "0.570641768305838", "1.97751584599397", "0.796", "0.133", "0", "0", "Up"], ["ICOS", "0", "Rest", "1.85479045129954", "0.547766910791179", "1.88563638021655", "0.678", "0.113", "0", "0", "Up"], ["NELL2", "0", "Rest", "1.18721514345065", "0.170895448837095", "1.46623938337675", "0.303", "0.044", "0", "0", "Up"], ["THEMIS", "0", "Rest", "1.23805314177686", "0.253811091172124", "1.41996112544184", "0.432", "0.059", "0", "0", "Up"], ["CD6", "0", "Rest", "1.21299888399476", "0.264638410601351", "1.36819495193978", "0.545", "0.088", "0", "0", "Up"], ["ZNF831", "0", "Rest", "1.17613918223895", "0.25605827456976", "1.32739616271096", "0.5", "0.077", "0", "0", "Up"], ["CD28", "0", "Rest", "1.01259943677491", "0.211348691827845", "1.15596047624372", "0.467", "0.072", "0", "0", "Up"], ["TRAT1", "0", "Rest", "0.973919525870308", "0.180775820508287", "1.14426449043809", "0.419", "0.054", "0", "0", "Up"], ["TREM2", "1", "Rest", "1.60031899431505", "0.256309862654964", "1.93899530915549", "0.866", "0.107", "0", "0", "Up"], ["CCL13", "1", "Rest", "1.30209206769147", "0.0846140795123652", "1.75644945593746", "0.356", "0.027", "0", "0", "Up"], ["CHIT1", "1", "Rest", "1.23997865876075", "0.0589663172782219", "1.7038406482855", "0.352", "0.025", "0", "0", "Up"], ["PLA2G7", "1", "Rest", "1.30347022419267", "0.145459750199235", "1.67065596812781", "0.789", "0.063", "0", "0", "Up"], ["FOLR2", "1", "Rest", "1.12686217267896", "0.0946108043026729", "1.48922393010731", "0.558", "0.057", "0", "0", "Up"], ["FPR3", "1", "Rest", "1.25075812239691", "0.281728368784732", "1.39801442001014", "0.849", "0.114", "0", "0", "Up"], ["LILRB4", "1", "Rest", "0.945973966373043", "0.0951910788775326", "1.22742025266297", "0.769", "0.067", "0", "0", "Up"], ["FCGR2B", "1", "Rest", "0.891058538870245", "0.132395965970924", "1.09451873162991", "0.594", "0.055", "0", "0", "Up"], ["LINC01010", "1", "Rest", "0.904821384873374", "0.184181877694107", "1.03966304327619", "0.659", "0.079", "0", "0", "Up"], ["AC243829.4", "1", "Rest", "0.9059376177694", "0.202959563854562", "1.01418295223671", "0.38", "0.05", "0", "0", "Up"], ["TRBC2", "2", "Rest", "2.04998188822928", "0.854112323665496", "1.72527509034621", "0.533", "0.173", "0", "0", "Up"], ["TRAC", "2", "Rest", "1.83617479723753", "0.70982555576082", "1.62497846498749", "0.571", "0.161", "0", "0", "Up"], ["CD3D", "2", "Rest", "1.76166752533097", "0.813633734676827", "1.3677236483719", "0.579", "0.184", "0", "0", "Up"], ["CD2", "2", "Rest", "1.77722060100929", "0.892228608722431", "1.2767735584987", "0.558", "0.192", "0", "0", "Up"], ["CD3E", "2", "Rest", "1.26356057064652", "0.448427953079792", "1.17598778503036", "0.437", "0.141", "0", "0", "Up"], ["KLRB1", "2", "Rest", "1.69593379222976", "0.6544215782618", "1.50258450611686", "0.331", "0.093", "3.12792694784114e-284", "9.76069604073827e-280", "Up"], ["CD3G", "2", "Rest", "1.22740628998669", "0.531531118606411", "1.00393565882809", "0.416", "0.145", "7.28869971193491e-267", "2.27443874510929e-262", "Up"], ["SPOCK2", "2", "Rest", "1.28135776749005", "0.539653859411257", "1.07005254999323", "0.434", "0.162", "1.86881446659983e-265", "5.83163554302476e-261", "Up"], ["TRBC1", "2", "Rest", "1.72112761062592", "0.674632240655992", "1.50977368056887", "0.361", "0.117", "1.90313433496717e-263", "5.93873069226505e-259", "Up"]];
+                    $('#table_cluster_id_diffexpr_top10_1').DataTable({data: datas})
+                });</script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>gene:基因名</em></span></p>
+                <p><span style="font-size:10px"><em>case:假设测验的实验组，基因在定义该细胞群过程中起关键作用</em></span>
+                </p>
+                <p><span
+                        style="font-size:10px"><em>ctrl:假设测验的对照组，Rest 表示除实验组细胞群以外的所有细胞群</em></span>
+                </p>
+                <p><span style="font-size:10px"><em>avg_expr_case:实验组中基因的平均表达量</em></span></p>
+                <p><span style="font-size:10px"><em>avg_expr_ctrl:对照组中基因的平均表达量</em></span></p>
+                <p><span style="font-size:10px"><em>log_fc:基因在实验组相对于在对照组的表达量的倍数变化（fold change, fc），经 log2 转化的结果</em></span>
+                </p>
+                <p><span style="font-size:10px"><em>pct_cells_case:实验组中表达对应基因的细胞占比</em></span></p>
+                <p><span style="font-size:10px"><em>pct_cells_ctrl:对照组中表达对应基因的细胞占比</em></span></p>
+                <p><span style="font-size:10px"><em>pval:假设测验的 p-value</em></span></p>
+                <p><span style="font-size:10px"><em>adj_pval:矫正后的 p-value</em></span></p>
+                <p><span style="font-size:10px"><em>up_down:实验组相对于对照组上调（up）或下调（down）的基因</em></span></p>
+                <p>&nbsp;</p>
+                <p>利用热图、轨迹分布图和小提琴图对每个细胞群的 top10 标志基因表达量的分布情况进行可视化展示(<a
+                        href="data/03.MarkerGeneDiscovery/group_by_main_cluster_id/figures">view</a>),结果如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">标志基因表达量的分布情况图</span></p>
+                <p><select id="image_cluster_id_diffexpr_content"></p>
+                <option value="image_cluster_id_diffexpr_top10_heatmap">top10.heatmap</option>
+                <option value="image_cluster_id_diffexpr_top10_tracks">top10.track</option>
+                <option value="image_cluster_id_0_diffexpr_top10_splitviolin">top10.violin.cluster0</option>
+                <option value="image_cluster_id_1_diffexpr_top10_splitviolin">top10.violin.cluster1</option>
+                <option value="image_cluster_id_2_diffexpr_top10_splitviolin">top10.violin.cluster2</option>
+                <p></select></p>
+                <div id="image_cluster_id_diffexpr_d_content">
+                    <p id="image_cluster_id_diffexpr_top10_heatmap_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="03.MarkerGeneDiscovery/group_by_main_cluster_id/figures/main_cluster_id.diffexpr.top10.heatmap.png">
+                        </img>
+                    </p>
+                    <p id="image_cluster_id_diffexpr_top10_tracks_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="03.MarkerGeneDiscovery/group_by_main_cluster_id/figures/main_cluster_id.diffexpr.top10.tracks.png">
+                        </img>
+                    </p>
+                    <p id="image_cluster_id_0_diffexpr_top10_splitviolin_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="03.MarkerGeneDiscovery/group_by_main_cluster_id/figures/main_cluster_id.0.diffexpr.top10.violin.png">
+                        </img>
+                    </p>
+                    <p id="image_cluster_id_1_diffexpr_top10_splitviolin_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="03.MarkerGeneDiscovery/group_by_main_cluster_id/figures/main_cluster_id.1.diffexpr.top10.violin.png">
+                        </img>
+                    </p>
+                    <p id="image_cluster_id_2_diffexpr_top10_splitviolin_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="03.MarkerGeneDiscovery/group_by_main_cluster_id/figures/main_cluster_id.2.diffexpr.top10.violin.png">
+                        </img>
+                    </p>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#image_cluster_id_diffexpr_content").change(function () {
+                            var v = $(this).val();
+                            $("#image_cluster_id_diffexpr_d_content>p").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>top10.heatmap：top10 标志基因热图。横轴为细胞，不同颜色表示不同细胞分群，纵轴为每个细胞群 top10 标志基因集合，颜色明暗表示基因表达量高低</em></span>
+                </p>
+                <p><span style="font-size:10px"><em>top10.track：top10 标志基因轨迹分布图。横轴为细胞，不同颜色表示不同细胞分群，纵轴为每个细胞群 top10 标志基因集合，柱状高低表示基因表达量高低</em></span>
+                </p>
+                <p><span
+                        style="font-size:10px"><em>top10.violin.cluster：top10 标志基因在所有细胞群的表达量分布小提琴图。横轴为细胞群，纵轴为表达量</em></span>
+                </p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h2 class="heading2" id="l1l2">1.5 细胞群功能富集分析</h2>
+                <p>为了了解不同细胞群的生物学功能，我们利用软件 <code>clusterProfiler</code> 对细胞群标志基因进行功能富集分析<sup
+                        title="Wu T, Hu E, Xu S, et al. clusterProfiler 4.0: A universal enrichment tool for interpreting omics data[J]. The Innovation, 2021, 2(3): 100141.">[<a
+                        href="#PMID_34557778" style="color: #000; text-decoration: none;">16</a>]</sup>，
+                    在数据库中挖掘与细胞群具有显著相关性的基因功能类别。将每个细胞群的标志基因映射到已知的功能信息源，
+                    并通过超几何分布检验这些生物过程是否被过代表 (over-represented)，即该生物过程是否偶然出现。
+                    生物过程来源于数据库，如 Gene Ontology (GO), KEGG<sup
+                            title="Kanehisa M, Goto S. KEGG: kyoto encyclopedia of genes and genomes[J]. Nucleic acids research, 2000, 28(1): 27-30.">[<a
+                            href="#KEGG" style="color: #000; text-decoration: none;">18</a>]</sup>，Reactome<sup
+                            title="Fabregat A, Jupe S, Matthews L, et al. The reactome pathway knowledgebase[J]. Nucleic acids research, 2018, 46(D1): D649-D655.">[<a
+                            href="#Reactome" style="color: #000; text-decoration: none;">19</a>]</sup> 等。</p>
+                <details>
+                    <summary>生物过程来源的数据库有哪些？</summary>
+                    <pre><code>
+1. <a href="http://geneontology.org/">Gene Ontology (GO)</a>：从三方面对基因功能进行分类，分子功能(Molecular Function, MF)，细胞成分(Cellular Component, CC)和生物过程(Biological Process, BP)。
+2. <a href="http://hpo.jax.org/app/">Human Phenotype Ontology (HP)</a>：人类疾病中遇到的表型异常的标准化注释。
+3. 生物途径 (Biological pathway) 数据库
+生物途径是细胞中分子之间的一系列相互作用，导致某种产物或细胞的变化。包括的数据库有<a href="https://reactome.org/">Reactome (REAC)</a>、<a
+                            href="https://www.genome.jp/kegg/pathway.html">KEGG</a>和<a
+                            href="https://www.wikipathways.org/index.php/WikiPathways">WikiPathways (WP)</a>。
+4. DNA中的调控模式 (Regulatory motifs in DNA)<a href="https://genexplain.com/transfac/">Transfac (TF)</a>：全称TRANScription FACtor，包含人工创建的真核转录因子、其基因组结合位点和DNA结合概况。<a
+                            href="https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2019/php/index.php">mirTarBase (MIRNA)</a>：全称MicroRNA-Target Interactions，收集有实验证据支持的microRNA-mRNA靶向关系。
+5. <a href="http://mips.helmholtz-muenchen.de/corum/">CORUM</a>：根据哺乳动物手动创建的蛋白复合物数据库。
+6. <a href="https://www.proteinatlas.org">Human Protein Atlas (HPA)</a>：正常组织中测量的蛋白质表达。
+<br/></code></pre>
+                    7. <a href="https://disease-ontology.org/">Disease Ontolog (DO)</a>:与GO数据库类似，通过参照MeSH,
+                    ICD等疾病分类标准，对人类的常见疾病与罕见病进行了归纳整理，提供了一个统一的，标准化的疾病分类信息规范化整理的数据库。
+                </details>
+
+                <p>细胞群功能富集分析结果(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/tables">view</a>)展示如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞群功能富集分析表</span></p>
+                <p>
+                <div>
+                    <table class="display"
+                           style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                           id="table_cluster_id_enriched_1">
+                        <thead>
+                        <tr>
+                            <th>case</th>
+                            <th>ctrl</th>
+                            <th>up_down</th>
+                            <th>ID</th>
+                            <th>database</th>
+                            <th>description</th>
+                            <th>pvalue</th>
+                            <th>adjpval</th>
+                            <th>qvalue</th>
+                            <th>intersection_count</th>
+                            <th>gene_ratio</th>
+                            <th>background_ratio</th>
+                            <th>gene</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </p></div>
+                <script>$(document).ready(function () {
+                    var datas = [[" 0", "Rest", "Up", "BIOCARTA_TCYTOTOXIC_PATHWAY", "BIOCARTA", "Tcytotoxic pathway", "9.03341285446281e-10", "4.29087110586983e-08", "3.80354225451065e-08", "7", "7\/33", "12\/1508", "PTPRC\/CD2\/CD3D\/CD3G\/CD3E\/CD247\/CD28"], [" 0", "Rest", "Up", "BIOCARTA_THELPER_PATHWAY", "BIOCARTA", "Thelper pathway", "9.03341285446281e-10", "4.29087110586983e-08", "3.80354225451065e-08", "7", "7\/33", "12\/1508", "PTPRC\/CD2\/CD3D\/CD3G\/CD3E\/CD247\/CD28"], [" 0", "Rest", "Up", "BIOCARTA_CTLA4_PATHWAY", "BIOCARTA", "Ctla4 pathway", "5.53032738538376e-09", "1.75127033870486e-07", "1.55237259940597e-07", "8", "8\/33", "22\/1508", "CD3D\/ICOS\/ITK\/CD3G\/CD3E\/CD247\/CD28\/PIK3R1"], [" 0", "Rest", "Up", "BIOCARTA_TCRA_PATHWAY", "BIOCARTA", "Tcra pathway", "1.81625808204242e-07", "4.31361294485075e-06", "3.82370122535247e-06", "6", "6\/33", "14\/1508", "FYN\/PTPRC\/CD3D\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_NO2IL12_PATHWAY", "BIOCARTA", "No2il12 pathway", "2.98036161110729e-07", "5.66268706110385e-06", "5.01955639765438e-06", "6", "6\/33", "15\/1508", "CD2\/CD3D\/STAT4\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_TOB1_PATHWAY", "BIOCARTA", "Tob1 pathway", "1.51810126217414e-06", "2.40366033177573e-05", "2.13066843813915e-05", "6", "6\/33", "19\/1508", "CD3D\/CD3G\/CD3E\/CD247\/CD28\/TGFBR3"], [" 0", "Rest", "Up", "BIOCARTA_STATHMIN_PATHWAY", "BIOCARTA", "Stathmin pathway", "2.13519293469545e-06", "2.89776183994382e-05", "2.56865315452084e-05", "6", "6\/33", "20\/1508", "CD2\/CAMK4\/CD3D\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_IL17_PATHWAY", "BIOCARTA", "Il17 pathway", "9.44040637687376e-06", "0.000112104825725376", "9.93726987039343e-05", "5", "5\/33", "15\/1508", "CD2\/CD3D\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_IL12_PATHWAY", "BIOCARTA", "Il12 pathway", "3.43341548473245e-05", "0.000362416078943981", "0.000321255250033446", "5", "5\/33", "19\/1508", "CD3D\/STAT4\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_CSK_PATHWAY", "BIOCARTA", "Csk pathway", "7.41858630047734e-05", "0.000704765698545348", "0.000624723056882302", "5", "5\/33", "22\/1508", "PTPRC\/CD3D\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_CTL_PATHWAY", "BIOCARTA", "Ctl pathway", "0.000118533352777448", "0.00102369713762341", "0.000907432365760366", "4", "4\/33", "13\/1508", "CD3D\/CD3G\/CD3E\/CD247"], [" 0", "Rest", "Up", "BIOCARTA_TCR_PATHWAY", "BIOCARTA", "Tcr pathway", "0.000267278243209347", "0.00210453241070727", "0.00186551349425575", "6", "6\/33", "44\/1508", "FYN\/CD3D\/CD3G\/CD3E\/CD247\/PIK3R1"], [" 0", "Rest", "Up", "BIOCARTA_IL7_PATHWAY", "BIOCARTA", "Il7 pathway", "0.000287988645675732", "0.00210453241070727", "0.00186551349425575", "4", "4\/33", "16\/1508", "FYN\/IL7R\/PIK3R1\/STAT5B"], [" 0", "Rest", "Up", "GOBP_COTRANSLATIONAL_PROTEIN_TARGETING_TO_MEMBRANE", "GO:BP", "Cotranslational protein targeting to membrane", "2.16994184962355e-41", "3.83862713198406e-38", "3.17496754839657e-38", "32", "32\/153", "107\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_NUCLEAR_TRANSCRIBED_MRNA_CATABOLIC_PROCESS_NONSENSE_MEDIATED_DECAY", "GO:BP", "Nuclear transcribed mrna catabolic process nonsense mediated decay", "1.45290076465183e-39", "1.15710383364464e-36", "9.5705235117435e-37", "32", "32\/153", "120\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_ESTABLISHMENT_OF_PROTEIN_LOCALIZATION_TO_ENDOPLASMIC_RETICULUM", "GO:BP", "Establishment of protein localization to endoplasmic reticulum", "1.96230158334309e-39", "1.15710383364464e-36", "9.5705235117435e-37", "32", "32\/153", "121\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_PROTEIN_LOCALIZATION_TO_ENDOPLASMIC_RETICULUM", "GO:BP", "Protein localization to endoplasmic reticulum", "3.19158569984966e-36", "1.41147877575851e-33", "1.16744845336606e-33", "32", "32\/153", "149\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_NUCLEAR_TRANSCRIBED_MRNA_CATABOLIC_PROCESS", "GO:BP", "Nuclear transcribed mrna catabolic process", "3.5097871091478e-34", "1.24176267921649e-31", "1.02707454351904e-31", "34", "34\/153", "208\/17949", "CNOT6L\/RPS29\/RPS27\/ZFP36L2\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_PROTEIN_TARGETING_TO_MEMBRANE", "GO:BP", "Protein targeting to membrane", "1.00290265565624e-32", "2.95689132975981e-30", "2.44567489712662e-30", "33", "33\/153", "208\/17949", "FYN\/RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_TRANSLATIONAL_INITIATION", "GO:BP", "Translational initiation", "2.24437650722506e-32", "5.67186005897306e-30", "4.69125315044036e-30", "32", "32\/153", "193\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_VIRAL_GENE_EXPRESSION", "GO:BP", "Viral gene expression", "5.29421258737025e-32", "1.17068275838225e-29", "9.68283617953243e-30", "32", "32\/153", "198\/17949", "RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_ESTABLISHMENT_OF_PROTEIN_LOCALIZATION_TO_MEMBRANE", "GO:BP", "Establishment of protein localization to membrane", "3.80835093460197e-25", "7.47379322805197e-23", "6.1816504043273e-23", "33", "33\/153", "351\/17949", "FYN\/RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_RNA_CATABOLIC_PROCESS", "GO:BP", "Rna catabolic process", "4.22486898137477e-25", "7.47379322805197e-23", "6.1816504043273e-23", "35", "35\/153", "414\/17949", "CNOT6L\/RPS29\/RPS27\/ZFP36L2\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA\/TENT5C"], [" 0", "Rest", "Up", "GOBP_PROTEIN_TARGETING", "GO:BP", "Protein targeting", "4.37440930414947e-22", "7.03484550821855e-20", "5.81859228016054e-20", "33", "33\/153", "438\/17949", "FYN\/RPS29\/RPS27\/RPS27A\/RPL13\/RPL34\/RPL30\/RPS15A\/RPL28\/RPS3\/RPL18A\/RPS12\/RPL21\/RPS18\/RPL17\/RPL13A\/RPL32\/RPL39\/RPS25\/RPS6\/RPS21\/RPS7\/RPL18\/RPL23A\/RPL3\/RPS19\/RPL35A\/RPS2\/RPS3A\/RPS4X\/RPL5\/RPS10\/RPSA"], [" 0", "Rest", "Up", "GOBP_T_CELL_ACTIVATION", "GO:BP", "T cell activation", "4.85104262924845e-16", "7.15124534261709e-14", "5.91486776724153e-14", "28", "28\/153", "474\/17949", "FYN\/PTPRC\/IL7R\/BCL11B\/CD2\/ZFP36L2\/CAMK4\/CD3D\/RPS3\/RPS6\/ICOS\/RHOH\/RORA\/ITK\/CD3G\/CD3E\/CD6\/PTPN22\/CCR6\/APBB1IP\/CD28\/PTGER4\/THEMIS\/PRKCQ\/RASGRP1\/CCR7\/PIK3R1\/STAT5B"], [" 0", "Rest", "Up", "GOBP_T_CELL_RECEPTOR_SIGNALING_PATHWAY", "GO:BP", "T cell receptor signaling pathway", "1.06733657935676e-14", "1.45239877606315e-12", "1.20129380186712e-12", "19", "19\/153", "204\/17949", "FYN\/PTPRC\/CD3D\/RPS3\/TRAC\/SKAP1\/FYB1\/ITK\/CD3G\/CD3E\/CD247\/PTPN22\/CD28\/TRBC1\/THEMIS\/TRAT1\/PRKCQ\/CCR7\/PIK3R1"], [" 0", "Rest", "Up", "GOBP_T_CELL_DIFFERENTIATION", "GO:BP", "T cell differentiation", "2.77321848404029e-14", "3.50415964161949e-12", "2.89832608482407e-12", "20", "20\/153", "246\/17949", "PTPRC\/IL7R\/BCL11B\/CD2\/ZFP36L2\/CAMK4\/CD3D\/RPS6\/RHOH\/RORA\/ITK\/CD3G\/CD3E\/PTPN22\/CCR6\/CD28\/PTGER4\/THEMIS\/CCR7\/STAT5B"], [" 0", "Rest", "Up", "GOBP_T_CELL_DIFFERENTIATION_IN_THYMUS", "GO:BP", "T cell differentiation in thymus", "4.15807300646993e-14", "4.90375409896354e-12", "4.05594489753909e-12", "13", "13\/153", "73\/17949", "PTPRC\/IL7R\/BCL11B\/ZFP36L2\/CAMK4\/CD3D\/RPS6\/CD3G\/CD3E\/CCR6\/CD28\/CCR7\/STAT5B"], [" 0", "Rest", "Up", "GOBP_MONONUCLEAR_CELL_DIFFERENTIATION", "GO:BP", "Mononuclear cell differentiation", "9.6123081987593e-14", "1.06276082522533e-11", "8.79020289228647e-12", "24", "24\/153", "411\/17949", "PTPRC\/IL7R\/BCL11B\/CD2\/ZFP36L2\/CAMK4\/CD3D\/RPS6\/RHOH\/RORA\/ITK\/CD3G\/CD3E\/IKZF1\/PTPN22\/CCR6\/CD28\/ITM2A\/PTGER4\/THEMIS\/ITGA4\/CCR7\/PIK3R1\/STAT5B"]];
+                    $('#table_cluster_id_enriched_1').DataTable({data: datas})
+                });</script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>case:实验组</em></span></p>
+                <p><span style="font-size:10px"><em>ctrl:对照组</em></span></p>
+                <p><span style="font-size:10px"><em>up_down:差异分析上/下调结果</em></span></p>
+                <p><span style="font-size:10px"><em>ID:生物过程 ID</em></span></p>
+                <p><span style="font-size:10px"><em>database:数据库来源</em></span></p>
+                <p><span style="font-size:10px"><em>description:生物过程描述</em></span></p>
+                <p><span style="font-size:10px"><em>pval:p 值</em></span></p>
+                <p><span style="font-size:10px"><em>adjpval:多重检验校正后的超几何 p-value</em></span></p>
+                <p><span style="font-size:10px"><em>qpval: q 值</em></span></p>
+                <p><span
+                        style="font-size:10px"><em>intersection_count:差异基因中属于相应生物过程的基因数量，即被注释为该生物过程的基因数</em></span>
+                </p>
+                <p><span
+                        style="font-size:10px"><em>gene_ratio:分子是富集到这个 term 上的基因数，分母是所有输入的做富集分析的基因数</em></span>
+                </p>
+                <p><span
+                        style="font-size:10px"><em>background_ratio:分子是中注释到这个 term 上的基因数目，分母是该数据库中所有基因数</em></span>
+                </p>
+                <p><span style="font-size:10px"><em>gene:组成该生物过程的基因</em></span></p>
+                <p>&nbsp;</p>
+                <p>每个数据库富集前 10 功能通路柱状图(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/figures">view</a>)如下：</p>
+                <p><span style="text-align: center;display:block;">每个数据库富集前 10 功能通路柱状图</span></p>
+                <p>
+                <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                    <embed scrolling="no"
+                           style="border:none;width:1200px;height:600px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                           src="04.FunctionalEnrichment/group_by_main_cluster_id/figures/0_vs_Rest.Up.bar.pdf"></embed>
+                </div>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>横轴为该 term 下的差异基因个数，纵轴为富集到的 term 的描述信息， 默认展示显著富集（p.adjust 最小）的10个 terms。p.adjust 值从大到小，对应蓝色到红色。</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>每个数据库富集前 10 功能通路气泡图(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/figures">view</a>)如下：</p>
+                <p><span style="text-align: center;display:block;">每个数据库富集前 10 功能通路气泡图</span></p>
+                <p>
+                <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                    <embed scrolling="no"
+                           style="border:none;width:1200px;height:600px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                           src="04.FunctionalEnrichment/group_by_main_cluster_id/figures/0_vs_Rest.Up.dot.pdf"></embed>
+                </div>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>横轴为 GeneRatio, 代表该 term 下的差异基因个数占差异基因总数的比例，纵轴为富集到的 term 的描述信息， 默认展示显著富集（p.adjust 最小）的10个。图中点的颜色对应p.adjust的值，从大到小为蓝色到红色，点大小对应该 term 下的差异基因个数。</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>每个数据库富集前 10 功能通路基因网络图(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/figures">view</a>)如下：</p>
+                <p><span style="text-align: center;display:block;">每个数据库富集前 10 功能通路基因网络图</span></p>
+                <p>
+                <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                    <embed scrolling="no"
+                           style="border:none;width:1200px;height:600px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                           src="04.FunctionalEnrichment/group_by_main_cluster_id/figures/0_vs_Rest.Up.cnet.pdf"></embed>
+                </div>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>图中灰色的点代表基因，黄色的点代表富集到的 term, 默认展示 top10 富集到的 terms,节点的大小对应富集到的基因个数。</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>每个数据库富集前 10 功能通路基因集重叠统计图(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/figures">view</a>)如下：</p>
+                <p><span style="text-align: center;display:block;">每个数据库富集前 10 功能通路基因网络图</span></p>
+                <p>
+                <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                    <embed scrolling="no"
+                           style="border:none;width:1200px;height:600px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                           src="04.FunctionalEnrichment/group_by_main_cluster_id/figures/0_vs_Rest.Up.upset.pdf"></embed>
+                </div>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>图中下方黑色的点代表不同 terms 基因集间有基因重叠, 上方柱状图为 terms 重叠基因数，默认展示 top10 富集到的 terms 的基因集重叠分布。</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>每个数据库富集前 10 功能通路基因热图(<a
+                        href="data/04.FunctionalEnrichment/group_by_main_cluster_id/figures">view</a>)如下：</p>
+                <p><span style="text-align: center;display:block;">每个数据库富集前 10 功能通路基因网络图</span></p>
+                <p>
+                <div style="width:800px;height:400px;overflow-x:hidden;overflow-y:hidden">
+                    <embed scrolling="no"
+                           style="border:none;width:1200px;height:600px;transform:scale(0.65);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                           src="04.FunctionalEnrichment/group_by_main_cluster_id/figures/0_vs_Rest.Up.heatmap.pdf"></embed>
+                </div>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>图中横轴为基因名，纵轴为 terms，黑色色块表示该基因存在于此通路，默认展示 top10 富集到的 terms 的基因分布。</em></span>
+                </p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h2 class="heading2" id="l1l2">1.6 细胞类型注释</h2>
+                <p>为了从生物学角度理解细胞分群的结果，需利用标志基因的特异性为细胞群打上一个代表细胞身份的标签，即细胞类型注释<sup
+                        title="Wagner A, Regev A, Yosef N. Revealing the vectors of cellular identity with single-cell genomics[J]. Nature biotechnology, 2016, 34(11): 1145-1160.">[<a
+                        href="#PMID_27824854" style="color: #000; text-decoration: none;">15</a>]</sup>，<sup
+                        title="Clevers H, Rafelski S, Elowitz M, et al. What is your conceptual definition of “cell type” in the context of a mature organism?[J]. Cell Systems, 2017, 4(3): 255-259.">[<a
+                        href="#PMID_28334573" style="color: #000; text-decoration: none;">20</a>]</sup>。标志基因可视化可帮助注释细胞群，并评价该注释的准确度。
+                </p>
+                <p>标志基因和细胞类型之间的对应关系可从文献或从数据库，如<a
+                        href="https://www.gsea-msigdb.org/gsea/msigdb/index.jsp">SCSig</a> 、<a
+                        href="https://panglaodb.se/index.html">PanglaoDB</a> 和 <a
+                        href="http://biocc.hrbmu.edu.cn/CellMarker">CellMarker</a>
+                    中获得。最佳标志基因来自相同生物体、器官和疾病背景的单细胞图谱；其次是同一组织来源分离纯化的多个细胞的
+                    RNA-seq 数据；最后，鉴于蛋白质的表达与 mRNA 的表达相关，蛋白质表达标记物亦可作为潜在标记物。但不同来源的标志基因可能会产生冲突。
+                </p>
+                <p>我们收集的初步用于注释当前细胞群的标志基因及对应细胞类型被总结在<strong>标志基因表</strong>中(<a
+                        href="data/05.CellAnnotation/group_by_main_cluster_id/tables/marker_genes.csv">view</a>)，若想实现更准确的细胞类型注释，需老师和科研顾问的共同收集和确认。
+                </p>
+                <p><span style="text-align: center;display:block;">细胞类型标志基因表</span></p>
+                <p>
+                <div>
+                    <table class="display"
+                           style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                           id="table_marker_genes_1">
+                        <thead>
+                        <tr>
+                            <th>cell_type</th>
+                            <th>gene</th>
+                            <th>species</th>
+                            <th>tissue</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </p></div>
+                <script>$(document).ready(function () {
+                    var datas = [["Immune", "PTPRC", "Human", "Lung"], ["Endothelial", "PECAM1", "Human", "Lung"], ["Endothelial", "VWF", "Human", "Lung"], ["Endothelial", "CLDN5", "Human", "Lung"], ["Endothelial", "FLT1", "Human", "Lung"], ["T_cell", "TRAC", "Human", "Lung"], ["T_cell", "TRBC1", "Human", "Lung"], ["T_cell", "TRBC2", "Human", "Lung"], ["T_cell", "TRDC", "Human", "Lung"], ["T_cell", "TRGC", "Human", "Lung"], ["T_cell", "PTPRC", "Human", "Lung"], ["T_cell", "CD3D", "Human", "Lung"], ["T_cell", "CD3E", "Human", "Lung"], ["T_cell", "CD3G", "Human", "Lung"], ["T_cell", "CD4", "Human", "Lung"], ["T_cell", "CD8A", "Human", "Lung"], ["NK_cell", "NKG7", "Human", "Lung"], ["NK_cell", "GNLY", "Human", "Lung"], ["NK_cell", "FCGR3A", "Human", "Lung"], ["NK_cell", "KLRF1", "Human", "Lung"], ["NK_cell", "TYROBP", "Human", "Lung"], ["NK_cell", "GZMA", "Human", "Lung"], ["NK_cell", "PRF1", "Human", "Lung"], ["NK_cell", "NCAM1", "Human", "Lung"], ["NK_cell", "KLRD7", "Human", "Lung"], ["NK_cell", "KLRD1", "Human", "Lung"], ["NK_cell", "NCR1", "Human", "Lung"], ["NK_cell", "EOMES", "Human", "Lung"], ["ILC2", "PTPRC", "Human", "Lung"]];
+                    $('#table_marker_genes_1').DataTable({data: datas})
+                });</script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>cell_type：细胞类型</em></span></p>
+                <p><span style="font-size:10px"><em>gene：标志基因</em></span></p>
+                <p><span style="font-size:10px"><em>species：该对应关系的生物体来源</em></span></p>
+                <p><span style="font-size:10px"><em>tissue：该对应关系的器官来源</em></span></p>
+                <p>&nbsp;</p>
+                <p>为了利用标志基因定义细胞群，我们利用小提琴图、点图和热图对标志基因在不同细胞群的表达情况进行了可视化展示(<a
+                        href="data/05.CellAnnotation/group_by_main_cluster_id/figures">view</a>),如下：</p>
+                <div style="text-align: center;">细胞类型标志在细胞分群中基因表达情况分布图</div>
+                <div>
+                    <select id="marker_content">
+                        <option value="marker-1">marker.violin</option>
+                        <option value="marker-2">marker.dot</option>
+                        <option value="marker-3">marker.scaledheatmap</option>
+                        <option value="marker-4">marker.heatmap</option>
+                    </select>
+                </div>
+                <div id="marker_d_content">
+                    <div id="marker-1_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.marker_gene.stacked_violin.png">
+                        </img>
+                    </div>
+                    <div id="marker-2_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.marker_gene.dot.png">
+                        </img>
+                    </div>
+                    <div id="marker-3_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.marker_gene.scaledmatrix.png">
+                        </img>
+                    </div>
+                    <div id="marker-4_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.marker_gene.matrix.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#marker_content").change(function () {
+                            var v = $(this).val();
+                            $("#marker_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>图上方为细胞类型，下方为该细胞类型对应的标志基因，左侧为细胞分群，右侧为依据标志基因在细胞分群中表达的层次聚类树状图结果，处于相近分枝的细胞群拥有更类似的表达模式。颜色深浅表示表达量高低。点图中圆圈大小表示各标志基因占细胞分群比例的多少</em></span>
+                </p>
+                <p>&nbsp;</p>
+                <p>每种细胞类型对应的标志基因用散点图和小提琴图进行可视化展示(<a
+                        href="data/05.CellAnnotation/group_by_main_cluster_id/figures">view</a>)，结果如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">每个细胞类型的标志基因表达情况分布图</span></p>
+                <p><select id="image_cluster_id_marker_gene_splitviolin_content" style="height: 60px;">
+                    <option value="main_cluster_id_AT1_marker_gene_violin">main_cluster_id.AT1.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_AT2_marker_gene_violin">main_cluster_id.AT2.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Alveolar_Macrophages_marker_gene_violin">
+                        main_cluster_id.Alveolar_Macrophages.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_B_cell_marker_gene_violin">
+                        main_cluster_id.B_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Basal_marker_gene_violin">main_cluster_id.Basal.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Bronchial_marker_gene_violin">
+                        main_cluster_id.Bronchial.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Cell_cycle_marker_gene_violin">
+                        main_cluster_id.Cell_cycle.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Ciliated_cell_marker_gene_violin">
+                        main_cluster_id.Ciliated_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Club_Cell_marker_gene_violin">
+                        main_cluster_id.Club_Cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_DC_marker_gene_violin">main_cluster_id.DC.marker_gene.violin</option>
+                    <option value="main_cluster_id_Endothelial_marker_gene_violin">
+                        main_cluster_id.Endothelial.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Epithelial_cell_marker_gene_violin">
+                        main_cluster_id.Epithelial_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Erythrocyte_marker_gene_violin">
+                        main_cluster_id.Erythrocyte.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Fibroblast_marker_gene_violin">
+                        main_cluster_id.Fibroblast.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_ILC2_marker_gene_violin">main_cluster_id.ILC2.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Immune_marker_gene_violin">
+                        main_cluster_id.Immune.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Macrophage_marker_gene_violin">
+                        main_cluster_id.Macrophage.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Mast_marker_gene_violin">main_cluster_id.Mast.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Monocyte_marker_gene_violin">
+                        main_cluster_id.Monocyte.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Myeloid_marker_gene_violin">
+                        main_cluster_id.Myeloid.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Myofibroblast_marker_gene_violin">
+                        main_cluster_id.Myofibroblast.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_NK_cell_marker_gene_violin">
+                        main_cluster_id.NK_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Neutrophil_marker_gene_violin">
+                        main_cluster_id.Neutrophil.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Non_small_cell_lung_tumors_marker_gene_violin">
+                        main_cluster_id.Non_small_cell_lung_tumors.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Pericyte_marker_gene_violin">
+                        main_cluster_id.Pericyte.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Plasma_marker_gene_violin">
+                        main_cluster_id.Plasma.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Schwann_marker_gene_violin">
+                        main_cluster_id.Schwann.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Secretory_marker_gene_violin">
+                        main_cluster_id.Secretory.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Small_cell_lung_tumors_marker_gene_violin">
+                        main_cluster_id.Small_cell_lung_tumors.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Smooth_muscle_cell_marker_gene_violin">
+                        main_cluster_id.Smooth_muscle_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Stromal_cell_marker_gene_violin">
+                        main_cluster_id.Stromal_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_T_cell_marker_gene_violin">
+                        main_cluster_id.T_cell.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_Tumor_marker_gene_violin">main_cluster_id.Tumor.marker_gene.violin
+                    </option>
+                    <option value="main_cluster_id_pDC_marker_gene_violin">main_cluster_id.pDC.marker_gene.violin
+                    </option>
+                </select>
+                <div id="image_cluster_id_marker_gene_splitviolin_d_content">
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_AT1_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.AT1.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_AT2_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.AT2.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Alveolar_Macrophages_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Alveolar_Macrophages.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_B_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.B_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Basal_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Basal.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Bronchial_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Bronchial.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Cell_cycle_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Cell_cycle.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Ciliated_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Ciliated_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Club_Cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Club_Cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_DC_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.DC.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Endothelial_marker_gene_violin_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Endothelial.marker_gene.violin.png">
+                        </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Epithelial_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Epithelial_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Erythrocyte_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Erythrocyte.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Fibroblast_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Fibroblast.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_ILC2_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.ILC2.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Immune_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Immune.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Macrophage_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Macrophage.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Mast_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Mast.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Monocyte_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Monocyte.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Myeloid_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Myeloid.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Myofibroblast_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Myofibroblast.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_NK_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.NK_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Neutrophil_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Neutrophil.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Non_small_cell_lung_tumors_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Non_small_cell_lung_tumors.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Pericyte_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Pericyte.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Plasma_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Plasma.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Schwann_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Schwann.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Secretory_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Secretory.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Small_cell_lung_tumors_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Small_cell_lung_tumors.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Smooth_muscle_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Smooth_muscle_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Stromal_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Stromal_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_T_cell_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.T_cell.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_Tumor_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Tumor.marker_gene.violin.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_splitviolin__main_cluster_id_pDC_marker_gene_violin_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.pDC.marker_gene.violin.png">
+                    </img></div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#image_cluster_id_marker_gene_splitviolin_content").change(function () {
+                            var v = $(this).val();
+                            $("#image_cluster_id_marker_gene_splitviolin_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#image_cluster_id_marker_gene_splitviolin_d_content table").each(function (idx, e) {
+                                e.style.width = null
+                            });
+                            $("#image_cluster_id_marker_gene_splitviolin__" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+                </p>
+                <p><select id="image_cluster_id_marker_gene_umap_content" style="height: 60px;">
+                    <option value="main_cluster_id_AT1_marker_gene_umap">main_cluster_id.AT1.marker_gene.umap</option>
+                    <option value="main_cluster_id_AT2_marker_gene_umap">main_cluster_id.AT2.marker_gene.umap</option>
+                    <option value="main_cluster_id_Alveolar_Macrophages_marker_gene_umap">
+                        main_cluster_id.Alveolar_Macrophages.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_B_cell_marker_gene_umap">main_cluster_id.B_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Basal_marker_gene_umap">main_cluster_id.Basal.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Bronchial_marker_gene_umap">
+                        main_cluster_id.Bronchial.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Cell_cycle_marker_gene_umap">
+                        main_cluster_id.Cell_cycle.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Ciliated_cell_marker_gene_umap">
+                        main_cluster_id.Ciliated_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Club_Cell_marker_gene_umap">
+                        main_cluster_id.Club_Cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_DC_marker_gene_umap">main_cluster_id.DC.marker_gene.umap</option>
+                    <option value="main_cluster_id_Endothelial_marker_gene_umap">
+                        main_cluster_id.Endothelial.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Epithelial_cell_marker_gene_umap">
+                        main_cluster_id.Epithelial_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Erythrocyte_marker_gene_umap">
+                        main_cluster_id.Erythrocyte.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Fibroblast_marker_gene_umap">
+                        main_cluster_id.Fibroblast.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_ILC2_marker_gene_umap">main_cluster_id.ILC2.marker_gene.umap</option>
+                    <option value="main_cluster_id_Immune_marker_gene_umap">main_cluster_id.Immune.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Macrophage_marker_gene_umap">
+                        main_cluster_id.Macrophage.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Mast_marker_gene_umap">main_cluster_id.Mast.marker_gene.umap</option>
+                    <option value="main_cluster_id_Monocyte_marker_gene_umap">
+                        main_cluster_id.Monocyte.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Myeloid_marker_gene_umap">main_cluster_id.Myeloid.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Myofibroblast_marker_gene_umap">
+                        main_cluster_id.Myofibroblast.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_NK_cell_marker_gene_umap">main_cluster_id.NK_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Neutrophil_marker_gene_umap">
+                        main_cluster_id.Neutrophil.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Non_small_cell_lung_tumors_marker_gene_umap">
+                        main_cluster_id.Non_small_cell_lung_tumors.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Pericyte_marker_gene_umap">
+                        main_cluster_id.Pericyte.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Plasma_marker_gene_umap">main_cluster_id.Plasma.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Schwann_marker_gene_umap">main_cluster_id.Schwann.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Secretory_marker_gene_umap">
+                        main_cluster_id.Secretory.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Small_cell_lung_tumors_marker_gene_umap">
+                        main_cluster_id.Small_cell_lung_tumors.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Smooth_muscle_cell_marker_gene_umap">
+                        main_cluster_id.Smooth_muscle_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Stromal_cell_marker_gene_umap">
+                        main_cluster_id.Stromal_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_T_cell_marker_gene_umap">main_cluster_id.T_cell.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_Tumor_marker_gene_umap">main_cluster_id.Tumor.marker_gene.umap
+                    </option>
+                    <option value="main_cluster_id_pDC_marker_gene_umap">main_cluster_id.pDC.marker_gene.umap</option>
+                </select>
+                <div id="image_cluster_id_marker_gene_umap_d_content">
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_AT1_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.AT1.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_AT2_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.AT2.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Alveolar_Macrophages_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Alveolar_Macrophages.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_B_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.B_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Basal_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Basal.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Bronchial_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Bronchial.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Cell_cycle_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Cell_cycle.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Ciliated_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Ciliated_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Club_Cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Club_Cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_DC_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.DC.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Endothelial_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Endothelial.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Epithelial_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Epithelial_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Erythrocyte_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Erythrocyte.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Fibroblast_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Fibroblast.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_ILC2_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.ILC2.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Immune_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Immune.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Macrophage_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Macrophage.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Mast_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Mast.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Monocyte_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Monocyte.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Myeloid_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Myeloid.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Myofibroblast_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Myofibroblast.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_NK_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.NK_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Neutrophil_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Neutrophil.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Non_small_cell_lung_tumors_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Non_small_cell_lung_tumors.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Pericyte_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Pericyte.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Plasma_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Plasma.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Schwann_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Schwann.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Secretory_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Secretory.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Small_cell_lung_tumors_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Small_cell_lung_tumors.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Smooth_muscle_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Smooth_muscle_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Stromal_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Stromal_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_T_cell_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.T_cell.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_Tumor_marker_gene_umap_p_content"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.Tumor.marker_gene.umap.png">
+                    </img></div>
+                    <div id="image_cluster_id_marker_gene_umap__main_cluster_id_pDC_marker_gene_umap_p_content"
+                         style="display:none"><img
+                            width="800px"
+                            height="600px"
+                            src="05.CellAnnotation/group_by_main_cluster_id/figures/main_cluster_id.pDC.marker_gene.umap.png">
+                    </img></div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#image_cluster_id_marker_gene_umap_content").change(function () {
+                            var v = $(this).val();
+                            $("#image_cluster_id_marker_gene_umap_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#image_cluster_id_marker_gene_umap_d_content table").each(function (idx, e) {
+                                e.style.width = null
+                            });
+                            $("#image_cluster_id_marker_gene_umap__" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>scatter：每个点代表一个细胞，颜色明暗表示基因表达量高低</em></span>
+                </p>
+                <p><span style="font-size:10px"><em>violin：横轴为细胞分群，纵轴为表达量高低</em></span></p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h2 class="heading2" id="l1l2">1.7 细胞组成分析</h2>
+                <p>在细胞层面，我们可以从组成结构的角度来分析聚类数据。细胞组成分析是围绕着属于每个细胞特征群的细胞比例进行的,比例可以随着疾病的发生或发育进程而发生改变。
+                    细胞组成分析的可视化展示可以帮助了解样品与细胞分群之间组成的变化<sup
+                            title="Haber A L, Biton M, Rogel N, et al. A single-cell survey of the small intestinal epithelium[J]. Nature, 2017, 551(7680): 333-339.">[<a
+                            href="#PMID_29144463" style="color: #000; text-decoration: none;">14</a>]</sup>。
+                    细胞群内细胞组成统计结果(<a href="data/06.CompositionalAnalysis/tables">view</a>)展示如下：
+                    &nbsp;</p>
+                <p><span style="text-align: center;display:block;">细胞群中样本中细胞数统计表</span></p>
+                <p><select id="table_cluster_id_count_content" style="height: 60px;">
+                    <option value="main_cluster_id_group_count">main_cluster_id.group.count</option>
+                    <option value="main_cluster_id_sample_name_count">main_cluster_id.sample_name.count</option>
+                </select>
+                <div id="table_cluster_id_count_d_content">
+                    <div id="table_cluster_id_count__main_cluster_id_group_count_p_content">
+                        <div>
+                            <table class="display"
+                                   style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                                   id="table_cluster_id_count_1">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th>31</th>
+                                    <th>32</th>
+                                    <th>33</th>
+                                    <th>34</th>
+                                    <th>35</th>
+                                    <th>36</th>
+                                    <th>37</th>
+                                    <th>38</th>
+                                    <th>39</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            </p></div>
+                        <script>$(document).ready(function () {
+                            var datas = [["CR-hBL186", "503", "607", "531", "1031", "1084", "905", "115", "258", "183", "87", "220", "574", "221", "528", "170", "653", "240", "109", "111", "113", "30", "126", "116", "203", "88", "42", "109", "39", "54", "1", "171", "48", "11", "30", "0", "16", "10", "14", "4", "0"], ["CR-hBL187", "935", "412", "942", "288", "406", "327", "186", "633", "642", "344", "81", "112", "202", "132", "192", "36", "101", "387", "430", "179", "23", "201", "143", "65", "259", "175", "41", "109", "92", "1", "0", "63", "4", "20", "0", "28", "17", "32", "1", "0"], ["CR-hBL188", "438", "663", "232", "401", "390", "368", "919", "329", "25", "72", "517", "112", "258", "71", "271", "16", "258", "70", "21", "19", "495", "79", "110", "52", "22", "10", "9", "36", "32", "0", "0", "15", "117", "50", "111", "13", "5", "7", "1", "0"], ["CR-hBL189", "795", "692", "585", "481", "302", "260", "451", "424", "203", "486", "159", "163", "265", "116", "187", "31", "119", "130", "124", "279", "25", "148", "158", "204", "98", "43", "98", "54", "39", "176", "0", "28", "15", "17", "1", "20", "31", "9", "12", "15"]];
+                            $('#table_cluster_id_count_1').DataTable({data: datas})
+                        });</script>
+                    </div>
+                    <div id="table_cluster_id_count__main_cluster_id_sample_name_count_p_content" style="display:none">
+                        <div>
+                            <table class="display"
+                                   style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                                   id="table_cluster_id_count_2">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th>31</th>
+                                    <th>32</th>
+                                    <th>33</th>
+                                    <th>34</th>
+                                    <th>35</th>
+                                    <th>36</th>
+                                    <th>37</th>
+                                    <th>38</th>
+                                    <th>39</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            </p></div>
+                        <script>$(document).ready(function () {
+                            var datas = [["CR-hBL186", "503", "607", "531", "1031", "1084", "905", "115", "258", "183", "87", "220", "574", "221", "528", "170", "653", "240", "109", "111", "113", "30", "126", "116", "203", "88", "42", "109", "39", "54", "1", "171", "48", "11", "30", "0", "16", "10", "14", "4", "0"], ["CR-hBL187", "935", "412", "942", "288", "406", "327", "186", "633", "642", "344", "81", "112", "202", "132", "192", "36", "101", "387", "430", "179", "23", "201", "143", "65", "259", "175", "41", "109", "92", "1", "0", "63", "4", "20", "0", "28", "17", "32", "1", "0"], ["CR-hBL188", "438", "663", "232", "401", "390", "368", "919", "329", "25", "72", "517", "112", "258", "71", "271", "16", "258", "70", "21", "19", "495", "79", "110", "52", "22", "10", "9", "36", "32", "0", "0", "15", "117", "50", "111", "13", "5", "7", "1", "0"], ["CR-hBL189", "795", "692", "585", "481", "302", "260", "451", "424", "203", "486", "159", "163", "265", "116", "187", "31", "119", "130", "124", "279", "25", "148", "158", "204", "98", "43", "98", "54", "39", "176", "0", "28", "15", "17", "1", "20", "31", "9", "12", "15"]];
+                            $('#table_cluster_id_count_2').DataTable({data: datas})
+                        });</script>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#table_cluster_id_count_content").change(function () {
+                            var v = $(this).val();
+                            $("#table_cluster_id_count_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#table_cluster_id_count_d_content table").each(function (idx, e) {
+                                e.style.width = null
+                            });
+                            $("#table_cluster_id_count__" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em><span></p>
+                <p><span style="font-size:10px"><em>行为样本ID，列为细胞群ID</em><span></p>
+                <p><span style="text-align: center;display:block;">细胞群中样本中细胞占比统计表</span></p>
+                <p><select id="table_cluster_id_percentage_content" style="height: 60px;">
+                    <option value="main_cluster_id_group_percentage">main_cluster_id.group.percentage</option>
+                    <option value="main_cluster_id_sample_name_percentage">main_cluster_id.sample_name.percentage
+                    </option>
+                </select>
+                <div id="table_cluster_id_percentage_d_content">
+                    <div id="table_cluster_id_percentage__main_cluster_id_group_percentage_p_content">
+                        <div>
+                            <table class="display"
+                                   style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                                   id="table_cluster_id_percentage_1">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th>31</th>
+                                    <th>32</th>
+                                    <th>33</th>
+                                    <th>34</th>
+                                    <th>35</th>
+                                    <th>36</th>
+                                    <th>37</th>
+                                    <th>38</th>
+                                    <th>39</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            </p></div>
+                        <script>$(document).ready(function () {
+                            var datas = [["CR-hBL186", "0.0538", "0.0649", "0.0568", "0.1102", "0.1159", "0.0967", "0.0123", "0.0276", "0.0196", "0.0093", "0.0235", "0.0614", "0.0236", "0.0564", "0.0182", "0.0698", "0.0257", "0.0117", "0.0119", "0.0121", "0.0032", "0.0135", "0.0124", "0.0217", "0.0094", "0.0045", "0.0117", "0.0042", "0.0058", "1e-04", "0.0183", "0.0051", "0.0012", "0.0032", "0", "0.0017", "0.0011", "0.0015", "4e-04", "0"], ["CR-hBL187", "0.1135", "0.05", "0.1143", "0.0349", "0.0493", "0.0397", "0.0226", "0.0768", "0.0779", "0.0417", "0.0098", "0.0136", "0.0245", "0.016", "0.0233", "0.0044", "0.0123", "0.047", "0.0522", "0.0217", "0.0028", "0.0244", "0.0174", "0.0079", "0.0314", "0.0212", "0.005", "0.0132", "0.0112", "1e-04", "0", "0.0076", "5e-04", "0.0024", "0", "0.0034", "0.0021", "0.0039", "1e-04", "0"], ["CR-hBL188", "0.0662", "0.1002", "0.0351", "0.0606", "0.059", "0.0556", "0.1389", "0.0497", "0.0038", "0.0109", "0.0782", "0.0169", "0.039", "0.0107", "0.041", "0.0024", "0.039", "0.0106", "0.0032", "0.0029", "0.0748", "0.0119", "0.0166", "0.0079", "0.0033", "0.0015", "0.0014", "0.0054", "0.0048", "0", "0", "0.0023", "0.0177", "0.0076", "0.0168", "0.002", "8e-04", "0.0011", "2e-04", "0"], ["CR-hBL189", "0.1068", "0.093", "0.0786", "0.0646", "0.0406", "0.0349", "0.0606", "0.057", "0.0273", "0.0653", "0.0214", "0.0219", "0.0356", "0.0156", "0.0251", "0.0042", "0.016", "0.0175", "0.0167", "0.0375", "0.0034", "0.0199", "0.0212", "0.0274", "0.0132", "0.0058", "0.0132", "0.0073", "0.0052", "0.0236", "0", "0.0038", "0.002", "0.0023", "1e-04", "0.0027", "0.0042", "0.0012", "0.0016", "0.002"]];
+                            $('#table_cluster_id_percentage_1').DataTable({data: datas})
+                        });</script>
+                    </div>
+                    <div id="table_cluster_id_percentage__main_cluster_id_sample_name_percentage_p_content"
+                         style="display:none">
+                        <div>
+                            <table class="display"
+                                   style="display:block;overflow-x:scroll;overflow-y:hidden;max-width:100%;white-space:nowrap;"
+                                   id="table_cluster_id_percentage_2">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th>31</th>
+                                    <th>32</th>
+                                    <th>33</th>
+                                    <th>34</th>
+                                    <th>35</th>
+                                    <th>36</th>
+                                    <th>37</th>
+                                    <th>38</th>
+                                    <th>39</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            </p></div>
+                        <script>$(document).ready(function () {
+                            var datas = [["CR-hBL186", "0.0538", "0.0649", "0.0568", "0.1102", "0.1159", "0.0967", "0.0123", "0.0276", "0.0196", "0.0093", "0.0235", "0.0614", "0.0236", "0.0564", "0.0182", "0.0698", "0.0257", "0.0117", "0.0119", "0.0121", "0.0032", "0.0135", "0.0124", "0.0217", "0.0094", "0.0045", "0.0117", "0.0042", "0.0058", "1e-04", "0.0183", "0.0051", "0.0012", "0.0032", "0", "0.0017", "0.0011", "0.0015", "4e-04", "0"], ["CR-hBL187", "0.1135", "0.05", "0.1143", "0.0349", "0.0493", "0.0397", "0.0226", "0.0768", "0.0779", "0.0417", "0.0098", "0.0136", "0.0245", "0.016", "0.0233", "0.0044", "0.0123", "0.047", "0.0522", "0.0217", "0.0028", "0.0244", "0.0174", "0.0079", "0.0314", "0.0212", "0.005", "0.0132", "0.0112", "1e-04", "0", "0.0076", "5e-04", "0.0024", "0", "0.0034", "0.0021", "0.0039", "1e-04", "0"], ["CR-hBL188", "0.0662", "0.1002", "0.0351", "0.0606", "0.059", "0.0556", "0.1389", "0.0497", "0.0038", "0.0109", "0.0782", "0.0169", "0.039", "0.0107", "0.041", "0.0024", "0.039", "0.0106", "0.0032", "0.0029", "0.0748", "0.0119", "0.0166", "0.0079", "0.0033", "0.0015", "0.0014", "0.0054", "0.0048", "0", "0", "0.0023", "0.0177", "0.0076", "0.0168", "0.002", "8e-04", "0.0011", "2e-04", "0"], ["CR-hBL189", "0.1068", "0.093", "0.0786", "0.0646", "0.0406", "0.0349", "0.0606", "0.057", "0.0273", "0.0653", "0.0214", "0.0219", "0.0356", "0.0156", "0.0251", "0.0042", "0.016", "0.0175", "0.0167", "0.0375", "0.0034", "0.0199", "0.0212", "0.0274", "0.0132", "0.0058", "0.0132", "0.0073", "0.0052", "0.0236", "0", "0.0038", "0.002", "0.0023", "1e-04", "0.0027", "0.0042", "0.0012", "0.0016", "0.002"]];
+                            $('#table_cluster_id_percentage_2').DataTable({data: datas})
+                        });</script>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#table_cluster_id_percentage_content").change(function () {
+                            var v = $(this).val();
+                            $("#table_cluster_id_percentage_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#table_cluster_id_percentage_d_content table").each(function (idx, e) {
+                                e.style.width = null
+                            });
+                            $("#table_cluster_id_percentage__" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+                </p>
+                <p><span style="font-size:10px"><em>注：</em><span></p>
+                <p><span style="font-size:10px"><em>行为样本ID，列为细胞群ID</em><span></p>
+                <p>&nbsp;</p>
+                <p>细胞群内细胞组成统计可视化结果(<a href="data/06.CompositionalAnalysis/figures">view</a>)展示如下：</p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">分组细胞降维聚类展示图</span></p>
+                <p><select id="cell_ident_umap_content"></p>
+                <option value="cell_ident_umap-1">sample_name.3D</option>
+                <option value="cell_ident_umap-2">sample_name.2D</option>
+                <option value="cell_ident_umap-3">sample_name.split</option>
+                <option value="cell_ident_umap-4">group.3D</option>
+                <option value="cell_ident_umap-5">group.2D</option>
+                <option value="cell_ident_umap-6">group.split</option>
+                <p></select></p>
+                <div id="cell_ident_umap_d_content">
+                    <div id="cell_ident_umap-1_p_content">
+                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="06.CompositionalAnalysis/figures/sample_name.umap.3d.html"></embed>
+                        </div>
+                    </div>
+                    <div id="cell_ident_umap-2_p_content" style="display:none">
+                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="06.CompositionalAnalysis/figures/sample_name.umap.html"></embed>
+                        </div>
+                    </div>
+                    <div id="cell_ident_umap-3_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.sample_name.umap.png">
+                        </img>
+                    </div>
+                    <div id="cell_ident_umap-4_p_content" style="display:none">
+                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="06.CompositionalAnalysis/figures/group.umap.3d.html"></embed>
+                        </div>
+                    </div>
+                    <div id="cell_ident_umap-5_p_content" style="display:none">
+                        <div style="width:800px;height:800px;overflow-x:hidden;overflow-y:hidden">
+                            <embed scrolling="no"
+                                   style="border:none;width:900px;height:900px;transform:scale(1);transform-origin:top left;overflow-x:hidden;overflow-y:hidden"
+                                   src="06.CompositionalAnalysis/figures/group.umap.html"></embed>
+                        </div>
+                    </div>
+                    <div id="cell_ident_umap-6_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.group.umap.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#cell_ident_umap_content").change(function () {
+                            var v = $(this).val();
+                            $("#cell_ident_umap_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="font-size:10px"><em>注：</em><span></p>
+                <p><span
+                        style="font-size:10px"><em>每一个点代表一个细胞，样本用不同颜色区分。通过拖拽和缩放可以在不同角度和尺度观察细胞群。点击右侧图例可对特定细胞群进行显示/隐藏操作。</em><span>
+                </p>
+                <p>&nbsp;</p>
+                <p>细胞组成用饼图、堆叠图和散点图进行可视化展示(<a href="data/06.CompositionalAnalysis/figures">view</a>)，结果如下：
+                </p>
+                <p>&nbsp;</p>
+                <p><span style="text-align: center;display:block;">分组细胞占比饼图</span></p>
+                <p><select id="vis_pie_content"></p>
+                <option value="vis_pie-1">sample_name.percentage.pie</option>
+                <option value="vis_pie-2">group.percentage.pie</option>
+                <p></select></p>
+                <div id="vis_pie_d_content">
+                    <div id="vis_pie-1_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.sample_name.percentage.pie.png">
+                        </img>
+                    </div>
+                    <div id="vis_pie-2_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.group.percentage.pie.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#vis_pie_content").change(function () {
+                            var v = $(this).val();
+                            $("#vis_pie_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="text-align: center;display:block;">分组细胞占比堆叠柱状图</span></p>
+                <p><select id="vis_stackedbar_content"></p>
+                <option value="vis_stackedbar-1">sample_name.percentage.stackedbar</option>
+                <option value="vis_stackedbar-2">group.percentage.stackedbar</option>
+                <p></select></p>
+                <div id="vis_stackedbar_d_content">
+                    <div id="vis_stackedbar-1_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.sample_name.percentage.stackedbar.png">
+                        </img>
+                    </div>
+                    <div id="vis_stackedbar-2_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.group.percentage.stackedbar.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#vis_stackedbar_content").change(function () {
+                            var v = $(this).val();
+                            $("#vis_stackedbar_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="text-align: center;display:block;">分组细胞占比分组柱状图</span></p>
+                <p><select id="vis_groupbar_content"></p>
+                <option value="vis_groupbar-1">sample_name.percentage.groupbar</option>
+                <option value="vis_groupbar-2">group.percentage.groupbar</option>
+                <p></select></p>
+                <div id="vis_groupbar_d_content">
+                    <div id="vis_groupbar-1_p_content">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.sample_name.percentage.groupedbar.png">
+                        </img>
+                    </div>
+                    <div id="vis_groupbar-2_p_content" style="display:none">
+                        <img
+                                width="800px"
+                                height="600px"
+                                src="06.CompositionalAnalysis/figures/main_cluster_id.group.percentage.groupedbar.png">
+                        </img>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("select#vis_groupbar_content").change(function () {
+                            var v = $(this).val();
+                            $("#vis_groupbar_d_content>div").each(function (idx, e) {
+                                e.style.display = "none"
+                            });
+                            $("#" + v + "_p_content").each(function (idx, e) {
+                                e.style.display = "inline"
+                            });
+                        });
+                    });
+                </script>
+
+                <p><span style="text-align: center;display:block;">分组占比差异统计图</span></p>
+                <p><img
+                        width="800px"
+                        height="600px"
+                        src="06.CompositionalAnalysis/figures/groupINmain_cluster_id.proportion.png">
+                </img></p>
+                <p><span style="font-size:10px"><em>注：</em></span></p>
+                <p><span style="font-size:10px"><em>不同颜色表示不同细胞群</em></span></p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h1 class="heading1" id="l1">2 附录</h1>
+                <h2 class="heading2" id="l1l2">2.1 关键资源表</h2>
+                <p style="text-align: center;">
+                <table style="margin: 0px auto">
+                    <tr>
+                        <td>software</td>
+                        <td>source</td>
+                        <td>identifier</td>
+                    </tr>
+                    <tr>
+                        <td>python v3.9</td>
+                        <td>(python 2020)</td>
+                        <td>https://www.python.org/</td>
+                    </tr>
+                    <tr>
+                        <td>scanpy v1.8</td>
+                        <td>(PMID:29409532)</td>
+                        <td>https://scanpy.readthedocs.io/en/stable/#</td>
+                    </tr>
+                    <tr>
+                        <td>plotly v5.3</td>
+                        <td>(plotly 2019)</td>
+                        <td>https://plotly.com/python/</td>
+                    </tr>
+                    <tr>
+                        <td>R v4.0</td>
+                        <td>(R 2021)</td>
+                        <td>https://www.r-project.org/</td>
+                    </tr>
+                    <tr>
+                        <td>Seurat v4.0</td>
+                        <td>(PMID:34062119)</td>
+                        <td>https://satijalab.org/seurat/index.html</td>
+                    </tr>
+                    <tr>
+                        <td>dplyr v1.0</td>
+                        <td>(dplyr)</td>
+                        <td>https://dplyr.tidyverse.org/</td>
+                    </tr>
+                    <tr>
+                        <td>plotly v4.9</td>
+                        <td>(plotly 2019)</td>
+                        <td>https://plotly.com/r/</td>
+                    </tr>
+                    <tr>
+                        <td>ggplot2 v3.3</td>
+                        <td>(ggplot2)</td>
+                        <td>https://ggplot2.tidyverse.org/</td>
+                    </tr>
+                    <tr>
+                        <td>clusterProfiler v4.0</td>
+                        <td>(PMID:34557778)</td>
+                        <td>https://github.com/YuLab-SMU/clusterProfiler</td>
+                    </tr>
+                </table>
+                </p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h2 class="heading2" id="l1l2">2.2 帮助文档</h2>
+                <p><a href="src/docs/cellxgene使用手册.pdf">1. 在线工具 cellxgene 使用手册</a></p>
+                <p><a href="src/docs/cell-clustering_bioinformatics_methods.docx">2. 基因单细胞转录组生信分析方法</a>
+                </p>
+                <p>
+                    <br/> <img class="logo" style="height:40px;width:60px" align="left" src="files/simg/logo.png"/>
+                <p style="text-align:right">
+
+                </p>
+                <hr/>
+                </p>
+                <br/>
+
+                <h1 class="heading1" id="l1">3 参考文献</h1>
+                <p>
+                <ul>
+                    <li id="PMID_31217225">[1] Luecken M D, Theis F J. Current best practices in single‐cell RNA‐seq
+                        analysis: a tutorial[J]. Molecular systems biology, 2019, 15(6): e8746.
+                    </li>
+                    <li id="PMID_27122128">[2] Zhu S, Ding S, Wang P, et al. Nlrp9b inflammasome restricts rotavirus
+                        infection in intestinal epithelial cells[J]. Nature, 2017, 546(7660): 667-670.
+                    </li>
+                    <li id="PMID_28504683">[3] Vallejos C A, Risso D, Scialdone A, et al. Normalizing single-cell RNA
+                        sequencing data: challenges and opportunities[J]. Nature methods, 2017, 14(6): 565-571.
+                    </li>
+                    <li id="PMID_24056876">[4] Brennecke P, Anders S, Kim J K, et al. Accounting for technical noise in
+                        single-cell RNA-seq experiments[J]. Nature methods, 2013, 10(11): 1093-1095.
+                    </li>
+                    <li id="PMID_31740819">[5] Korsunsky I, Millard N, Fan J, et al. Fast, sensitive and accurate
+                        integration of single-cell data with Harmony[J]. Nature methods, 2019, 16(12): 1289-1296.
+                    </li>
+                    <li id="PMID_26000487">[6] Klein A M, Mazutis L, Akartuna I, et al. Droplet barcoding for
+                        single-cell transcriptomics applied to embryonic stem cells[J]. Cell, 2015, 161(5): 1187-1201.
+                    </li>
+                    <li id="PMID_27135536">[7] Heimberg G, Bhatnagar R, El-Samad H, et al. Low dimensionality in gene
+                        expression data enables the accurate extraction of transcriptional programs from shallow
+                        sequencing[J]. Cell systems, 2016, 2(4): 239-250.
+                    </li>
+                    <li id="PCA">[8] Pearson K. LIII. On lines and planes of closest fit to systems of points in
+                        space[J]. The London, Edinburgh, and Dublin philosophical magazine and journal of science, 1901,
+                        2(11): 559-572.
+                    </li>
+                    <li id="TSNE">[9] Van der Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of machine
+                        learning research, 2008, 9(11).
+                    </li>
+                    <li id="UMAP">[10] McInnes L, Healy J, Melville J. Umap: Uniform manifold approximation and
+                        projection for dimension reduction[J]. arXiv preprint arXiv:1802.03426, 2018.
+                    </li>
+                    <li id="Leiden">[11] Traag V A, Waltman L, Van Eck N J. From Louvain to Leiden: guaranteeing
+                        well-connected communities[J]. Scientific reports, 2019, 9(1): 1-12.
+                    </li>
+                    <li id="Louvain">[12] Blondel V D, Guillaume J L, Lambiotte R, et al. Fast unfolding of communities
+                        in large networks[J]. Journal of statistical mechanics: theory and experiment, 2008, 2008(10):
+                        P10008.
+                    </li>
+                    <li id="Pearson">[13] Benesty J, Chen J, Huang Y, et al. Pearson correlation coefficient[M]//Noise
+                        reduction in speech processing. Springer, Berlin, Heidelberg, 2009: 1-4.
+                    </li>
+                    <li id="PMID_29144463">[14] Haber A L, Biton M, Rogel N, et al. A single-cell survey of the small
+                        intestinal epithelium[J]. Nature, 2017, 551(7680): 333-339.
+                    </li>
+                    <li id="PMID_27824854">[15] Wagner A, Regev A, Yosef N. Revealing the vectors of cellular identity
+                        with single-cell genomics[J]. Nature biotechnology, 2016, 34(11): 1145-1160.
+                    </li>
+                    <li id="PMID_34557778">[16] Wu T, Hu E, Xu S, et al. clusterProfiler 4.0: A universal enrichment
+                        tool for interpreting omics data[J]. The Innovation, 2021, 2(3): 100141.
+                    </li>
+                    <li id="GO">[17] Gene Ontology Consortium. The Gene Ontology (GO) database and informatics
+                        resource[J]. Nucleic acids research, 2004, 32(suppl_1): D258-D261.
+                    </li>
+                    <li id="KEGG">[18] Kanehisa M, Goto S. KEGG: kyoto encyclopedia of genes and genomes[J]. Nucleic
+                        acids research, 2000, 28(1): 27-30.
+                    </li>
+                    <li id="Reactome">[19] Fabregat A, Jupe S, Matthews L, et al. The reactome pathway knowledgebase[J].
+                        Nucleic acids research, 2018, 46(D1): D649-D655.
+                    </li>
+                    <li id="PMID_28334573">[20] Clevers H, Rafelski S, Elowitz M, et al. What is your conceptual
+                        definition of “cell type” in the context of a mature organism?[J]. Cell Systems, 2017, 4(3):
+                        255-259.
+                    </li>
+                    <li id="PMID_29409532">[21] Wolf F A, Angerer P, Theis F J. SCANPY: large-scale single-cell gene
+                        expression data analysis[J]. Genome biology, 2018, 19(1): 1-5.
+                    </li>
+                    <li id="PMID_34062119">[22] Hao Y, Hao S, Andersen-Nissen E, et al. Integrated analysis of
+                        multimodal single-cell data[J]. Cell, 2021.
+                    </li>
+                    <li id="dplyr">[23] Wickham H, Francois R, Henry L, et al. dplyr: A grammar of data manipulation[J].
+                        R package version 0.4, 2015, 3: p156.
+                    </li>
+                    <li id="ggplot2">[24] Wickham H. Elegant graphics for data analysis[J]. Media, 2009, 35(211):
+                        10.1007.
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <!--返回顶部-->
+        <div class="tops"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        // TOC
+        var options = {
+            showAndHideOnScroll: true,
+            selectors: 'h1,h2,h3,h4,h5,h6',
+            scrollTo: 120
+        }
+        var toc = $('#TOC').tocify(options)
+
+        // 目录收起打开
+        if ($('.needzk').length > 0) {
+            $('.proharah5').click(function () {
+                if ($(this).hasClass('proharah5on')) {
+                    $(this).removeClass('proharah5on')
+                    $(this).siblings('.phrasub1').removeClass('display-menu')
+                } else {
+                    $(this).addClass('proharah5on')
+                    $(this).siblings('.phrasub1').addClass('display-menu')
+                }
+                $(this).parents('li').siblings().find('.phrasub1').slideUp(300)
+                $(this).parents('li').siblings().find('.proharah5').removeClass('proharah5on')
+            })
+        }
+
+    </script>
+    <script>
+        $(function () {
+            $(".tabs").tabs();
+        });
+        $(".tops").click(function () {
+            $("body,html").animate({
+                scrollTop: 0
+            }, 300);
+        });
+
+    </script>
+</div>
+</body>
+</html>
